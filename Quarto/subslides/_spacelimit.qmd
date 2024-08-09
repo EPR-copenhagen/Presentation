@@ -1,0 +1,35 @@
+
+::: columns
+
+::: {.column width="50%"} 
+
+You can use panel tabs in a two column format. 
+
+Now the text remains the same while you scroll through the images. 
+
+This can help when there are multiple images to show and you don't want your audience distracted. 
+
+:::
+
+::: {.column width="50%"}
+
+:::{.panel-tabset}
+
+#### Colonnade
+![Transport mechanisms in MOFs. [Xie, Chemical Reviews (2020)]](_figs/sample/front.png)
+
+#### Arches
+![Transport pathways. [Xie, Chemical Reviews (2020)]](_figs/sample/arches.png)
+
+#### Questions
+Hide discussion questions here:
+
+- What building materials?
+- Form vs. Function?
+
+
+:::
+
+:::
+
+:::

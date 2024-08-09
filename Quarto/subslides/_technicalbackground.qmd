@@ -1,0 +1,270 @@
+
+
+:::{.navbar}
+
+[Overview]{.nav-option data-option="option11" onclick="showContent(this)"}
+[Schematics]{.nav-option data-option="option12" onclick="showContent(this)"}
+[Problem]{.nav-option data-option="option13" onclick="showContent(this)"}
+[Philosophy]{.nav-option data-option="option14" onclick="showContent(this)"}
+[Solution]{.nav-option data-option="option15" onclick="showContent(this)"}
+[Model]{.nav-option data-option="option16" onclick="showContent(this)"}
+[Supplementary]{.nav-option data-option="option17" onclick="showContent(this)"}
+
+:::
+
+:::{#option11Content .content .scrollable}
+
+::::{.columns}
+:::{.column width=16%} 
+
+:::: {.ddm style="font-size:0.63em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
+
+Phenomenon A
+
+:::
+:::{.ddm-box style="font-family:GS_L"}
+
+Drop down menus show cues which differentiate phenomenon A from B
+
+:::
+::::
+
+:::
+:::{.column width=68%}
+
+![Classical capacitive and diffusive modes of energy storage.](_figs/capdiffclassical.png){#fig-schema width=90% fig-align="center"}
+
+:::
+
+
+:::{.column width=16%} 
+
+:::: {.ddm style="font-size:0.63em; font-family:Ubuntu Mono; line-height:0; margin-bottom: 0px; margin-top: 0px"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
+
+Phenomenon B
+
+:::
+:::{.ddm-box style="font-family:GS_L"}
+
+Suitable for making situations in which you have competing phenomena such as here.
+
+:::
+::::
+
+
+:::
+
+::::
+
+:::
+
+:::{#option12Content .content .scrollable}
+
+
+:::{.panel-tabset}
+### Flowchart
+![General scheme of electrochemical contributions.](_figs/flowchart.png){#fig-schema width=90% fig-align="center"}
+
+### Schema
+![Kant's Schema.](_figs/sample/kant.png){#fig-schema fig-align="center" width=90%}
+
+### Another
+![Another schema.](_figs/sample/marx.png){#fig-schema2 fig-align="center"}
+:::
+
+
+
+
+:::
+
+
+:::{#option13Content .content .scrollable}
+
+Present your data in tabs that you can go back and forth between. 
+
+::::{.columns}
+:::{.column}
+
+<blockquote>
+<span style="color:DimGray; font-size:0.65em; line-height: 0">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span style="color:FireBrick"> aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br></br>-- Cicero (I never said that, 45 BCE)
+</span>
+</blockquote>
+
+:::
+:::{.column}
+
+<blockquote>
+<span style="color:DimGray; font-size:0.65em; line-height: 0">
+ In dictum porttitor magna, pulvinar lobortis ex consequat quis. Suspendisse potenti. Suspendisse faucibus, <span style="color:FireBrick"> ante a finibus consequat, nunc erat ultricies neque, non rutrum turpis tortor sit amet tortor.</span> Donec vitae quam et tellus iaculis bibendum. Curabitur varius massa mauris, ut pellentesque ipsum vulputate sed. Integer aliquam iaculis dolor sit amet auctor. Sed pretium neque eu lacus cursus dignissim non sed neque. Proin pulvinar massa sit amet justo tincidunt fringilla. Sed a magna fermentum, ultricies odio non, vulputate ipsum. Sed euismod odio ut lacinia porttitor. Praesent porta vulputate euismod. Donec sagittis libero quis mattis sollicitudin. 
+</br></br></br>- Cicero (Like Why Would I, 43 BCE)
+</span>
+
+</blockquote>
+
+
+:::
+::::
+
+
+
+
+:::
+
+
+
+
+:::{#option14Content .content}
+
+::::{.columns}
+:::{.column}
+
+:::{.smaller}
+Attention must be paid to the underlying assumptions before applying the model. 
+
+<blockquote>
+Battery models commonly make  <span style="color:FireBrick">assumptions known to be false,</span> such as describing phase separating materials with Fickian diffusion. 
+
+--[RB Smith](https://dspace.mit.edu/handle/1721.1/111406)
+</blockquote>
+
+:::
+
+:::
+:::{.column}
+
+![](_figs/quad/LinearityMOF.png)
+
+:::
+::::
+
+
+
+
+:::
+
+
+:::{#option15Content .content}
+
+Your solution goes here. 
+
+
+:::
+
+:::{#option16Content .content}
+
+Minimize mathematical derivations but keep them at hand in case someone needs them. 
+
+$$
+I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
+$${#eq-quadraticmodel1}
+
+Dividing by $\nu^{1/2}$ gives us a model that is quadratic in $\nu^{1/2}$:
+
+$$
+\frac{I(\nu, V)}{\nu^{1/2}} =  \beta_1 \nu^{1/2} + \beta_2 + \beta_3 \nu + \epsilon
+$${#eq-quadraticmodel2}
+
+And it is this model that we will test.
+
+
+::::{.dd }
+:::{.dd-head onclick="toggleBox(this)"}
+
+Derivation
+
+:::
+:::{.dd-box style="font-size:0.75em"}
+
+To rectify this situation we turn to the classic papers by [(Reinmuth, 1962)](https://pubs.acs.org/doi/pdf/10.1021/ac60191a030), and [(Nicholson and Shain, 1964)](https://pubs.acs.org/doi/10.1021/ac60210a007) and we see that for a semi-infinite linear diffusion reaction of the form $O + ne \rightleftharpoons R$ with only O present initially, the diffusion limited current, $i_D$ , has the general form:
+
+$$
+    i_D = \Lambda \sigma^{1/2} \chi(\sigma t)
+$${#eq-idiffusion}
+
+where $\Lambda$ and $\sigma$ are:
+
+\begin{align}
+    \Lambda &= nFAC_O^*(\pi D_O)^{1/2}\\
+    \sigma &= \frac{nF\nu }{RT} 
+\end{align} 
+
+The normalized current $\chi$ can be given the series expansion:
+
+\begin{align}
+    \chi(\sigma t) &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}(E-E_0) \Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}E + \frac{jnF}{RT}E_0 \Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - \nu t) + \frac{jnF}{RT}E_0\Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - E_0) \Biggl] exp [j\sigma t]}\\
+    &= \sum_{j=1}^{\infty} d_j exp[j \sigma t]\\
+    &= \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{(j\sigma)^n}{n!}
+    \label{eq-normcurrent}
+\end{align} 
+
+Where the $c_j$ and $d_j$  are expansion coefficients.
+
+Therefore substituting the series expansion for the normalize current into @eq-idiffusion, we see that the diffusion limited current is a function of (2n+1)/2 powers of $\nu$ where $n \in \mathbb{N}$, the set of natural numbers. And the net diffusive current is then:
+:
+$$
+i_D = \Lambda \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{j^n \sigma^{n+1/2}}{n!}
+$${#eq-idiffusion2}
+
+
+We can now extend the model by adding a diffusive correction from the next order term and thereby get a model that is quadratic in :
+$$
+I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
+$${#eq-quadmodel2}
+
+$$
+\frac{I(\nu, V)}{\nu^{1/2}} =  {\beta_1 \nu^{1/2}}+ \beta_2 + \beta_3 \nu + \epsilon
+$${#eq-quadmodel}
+
+where $\beta_i$ are the regression parameters; $I$, $V$, and $\nu$ have their usual meanings and $\epsilon$ again is the noise term. Parameters $\beta_2$ and $\beta_3$ correspond to the diffusion limited Faradaic current but the first parameter, $\beta_1$ would encompass the contribution from the Double Layer (DL) as well as the Faradaic, though non-diffusion limited contribution from pseudocapacitive effects.
+
+:::
+::::
+
+
+:::
+
+
+:::{#option17Content .content}
+
+
+
+Show that you've come prepared and that your statements are backed by data if someone wants to cross check you. 
+
+To do this always have a Supplementary section comprising information that is only to be shown if someone asks the relevant question. 
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
+
+Delhi Sultnate
+:::
+:::{.ddm-box}
+
+![](_figs/sample/delhi.png)
+
+:::
+::::
+
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
+
+Mughal Empire
+
+:::
+:::{.ddm-box}
+
+![](_figs/sample/mughal.jpg)
+
+:::
+::::
+
+
+
+:::
+

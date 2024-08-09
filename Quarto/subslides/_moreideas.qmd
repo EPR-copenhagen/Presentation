@@ -1,0 +1,104 @@
+:::{.navbar}
+
+[Workflow]{.nav-option data-option="option31" onclick="showContent(this)"}
+[Interactivity]{.nav-option data-option="option33" onclick="showContent(this)"}
+[Analysis]{.nav-option data-option="option36" onclick="showContent(this)"}
+[Pairings]{.nav-option data-option="option37" onclick="showContent(this)"}
+
+:::
+
+
+:::{#option31Content .content}
+
+::::{.columns}
+:::{.column}
+
+- You can present data like this. 
+- By having the tab structure in the header, your audience immediately knows where you are. 
+- Without it you risk shortsightedness on the audience's part. 
+
+:::
+:::{.column}
+
+![The complete workflow](_figs/workflow2.png){#fig-workflow width=650}
+
+:::
+::::
+
+
+:::
+
+:::{#option33Content .content}
+
+```{r}
+ojs_define(actors = data.frame(
+  x = rnorm(100),
+  y = rnorm(100)
+))
+```
+
+```{ojs}
+//| panel: sidebar
+viewof talentWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "talent weight" })
+viewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "looks weight" })
+viewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: "min fame" })
+```
+
+```{ojs}
+//| panel: fill
+import { plotActors } from './_data/actors.js';
+plotActors(actors, talentWeight, looksWeight, minimum)
+```
+:::
+
+:::{#option36Content .content}
+
+::: {.panel-tabset}
+
+#### Featurizers
+
+- Crystal NN
+- Morgan fingerprint
+- Bond orientational parameter
+- Intermetallic distance
+- One Hot Encoding 
+
+#### Model 
+![Density plot between bandgaps and conductivity](_figs/ML.png){#fig-bgbin width=800}
+
+
+#### ROC  
+![Receiver operator characteristics](_figs/fig_ROC.png){#fig-porosity width=600}
+
+#### Confusion Matrix
+![Confusion matrix](_figs/fig_confusion.png){#fig-density width=600}
+
+:::
+
+:::
+
+:::{#option37Content .content}
+
+Putting a large table on a slide can be difficult. 
+
+Other than removing columns altogether, you can do two things to make your tables readable:
+
+1. Enable scrolling
+2. Zoom in. To do that hold down Ctrl key (cmd on Mac) and click on the segment you want to zoom. Repeating the procedure will zoom out.  
+
+
+
+[Table 2: Mean log conductivity for common metals and linkers pairings with number of samples indicated inside parentheses.]{style="font-size: 65%;"}
+
+![](_figs/TableMetalligandpairings.png){width=1400 fig-align="center"}
+
+:::{.callout-caution}
+There are no absolute answers here. Metal X is not better than Metal Y. 
+
+What we have before us are trends. 
+
+Engineering the right material for a problem is about deciding what tradeoffs you want. 
+:::
+
+:::
+

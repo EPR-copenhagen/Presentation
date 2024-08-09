@@ -1,0 +1,200 @@
+---
+title: "."
+format:
+    revealjs:
+        title-slide-attributes:
+            data-background-image: _figs/treelogo.png
+            data-background-size: 50px
+        width: 1600
+        height: 900
+        margin: 0.1
+        theme: [default, css/style.scss]
+        css: [css/style.css, css/buttons.css, css/tabs.css, css/callouts.css, css/nav.css, css/revealhacks.css]
+        subtitle: ""
+        author: ""
+        toc: FALSE
+        incremental: FALSE
+        slide-number: true
+        auto-animate-easing: ease-in-out
+        auto-animate-unmatched: false
+        auto-animate-duration: 1.5   
+        transition: convex
+        background-transition: fade
+        logo: _figs/treelogo.png
+        ligthbox: auto
+        engine: jupyter            
+
+include-in-header:
+    file: scripts/scripts.js
+
+editor: source
+---
+
+## {.center}
+
+
+#### A Gorgeous Presentation for Your Business 
+
+::::{.columns}
+:::{.column}
+
+
+`r Sys.Date()`
+
+Brought to you by **Cardinal**
+
+</br> 
+This revealjs presentation seeks to showcase the power of HTML presentations. HTML can do what powerpoint can't (or at least not as elegantly). 
+
+And here we prove it.
+
+:::
+:::{.column}
+ 
+
+
+```{r}
+
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=72.64211517160314, lat=34.06960235636041, popup="Here we are")
+
+```
+
+:::
+::::
+
+
+####
+
+
+
+
+## {.center}
+
+<!-- ![](_figs/treelogo.png){width="1%"} -->
+
+::: columns
+::: {.column .right width="65%"}
+[**The Perfect Title for Your Gorgeous Business Presentation**]{style="color:teal"}
+
+[A Possible Subtitle]{style="color:gray"}
+:::
+
+::: {.column .left width="35%"}
+**John Doe** 
+
+(Senior Data Analyst)
+
+
+:::
+:::
+
+<!-- <div class="vl"></div> -->
+
+##
+The next few slides are for a presentation 
+
+
+## Navigating a forest (an analogy)
+{{< include subslides/_forestanalogy.qmd >}}
+
+
+## Medium is Message
+
+Arrange information side by side to make elegant comparisons. 
+
+::::{.columns}
+::: {.column}
+
+
+#### Approach A: Powerpoint
+
+Powerpoint's presentation structures can be rigid and uninteractive. 
+
+Presentations usually only go in the direction the presenter arranged it. 
+
+How many times have you found yourself jumping around slides in response to a question from the audience?
+
+:::
+::: {.column }
+#### Approach B: HTML 
+
+HTML presentations can make presentations more dynamic.
+
+:::
+::::
+
+Quotations create context and continuity:
+
+<blockquote>
+
+Powerpoint presentations too often resemble a schoolplay - very loud, very slow, and very simple.<sup>&#128481;</sup>
+
+-- Edward Tufte
+
+* Emojis help audience make quick evaluations and release tension
+</blockquote>
+
+
+
+
+# Powerpoint is for Plebians. 
+
+## Dazzle Your Audience by Doing What Powerpoint Can't {.scrollable}
+
+{{< include subslides/_technicalbackground.qmd >}}
+
+
+## {.scrollable}
+{{< include subslides/_solution.qmd >}}
+
+
+## By pass Space Limitations
+{{< include subslides/_spacelimit.qmd >}}
+
+
+# Other Ideas
+
+
+
+## {.scrollable}
+{{< include subslides/_moreideas.qmd >}}
+
+
+# Summary {.scrollable}
+Try summarizing different phases of your project 
+
+:::{.panel-tabset}
+## I
+
+In phase I we: 
+
+- Accomplishment A
+- Accomplishment B
+- Accomplishment C
+
+## II
+
+Summary for phase II
+
+## III
+
+Summary for phase III
+
+:::
+
+
+
+
+
+
+# Related Publications 
+
+- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
+- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
+- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
+
+## {.center}
+<pre><p style="margin-left: 5em;font-family: GS_L; font-variant: small-caps; font-size:1.5em"><b>The End</pre></b></p></pre>
