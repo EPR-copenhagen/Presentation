@@ -153,6 +153,9 @@ Powerpoint presentations too often resemble a schoolplay - very loud, very slow,
 ## By pass Space Limitations
 {{< include subslides/_spacelimit.qmd >}}
 
+## Questions
+{{< include subslides/_questions.qmd >}}
+
 
 # Other Ideas
 
