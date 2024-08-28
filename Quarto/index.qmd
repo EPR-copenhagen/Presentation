@@ -33,7 +33,7 @@ editor: source
 ## {.center}
 
 
-#### A Gorgeous Presentation for Your Business 
+#### Title goes here 
 
 ::::{.columns}
 :::{.column}
@@ -41,12 +41,13 @@ editor: source
 
 `r Sys.Date()`
 
-Brought to you by **Cardinal**
-
 </br> 
-This revealjs presentation seeks to showcase the power of HTML presentations. HTML can do what powerpoint can't (or at least not as elegantly). 
 
-And here we prove it.
+Presenter: Misbah Shaheen
+Reg No.: ####
+Supervisor: []
+Co-supervisor: []
+
 
 :::
 :::{.column}
@@ -76,21 +77,49 @@ leaflet() %>%
 
 ::: columns
 ::: {.column .right width="65%"}
-[**The Perfect Title for Your Gorgeous Business Presentation**]{style="color:teal"}
+[**Title: something something ab initio**]{style="color:teal"}
 
-[A Possible Subtitle]{style="color:gray"}
+[PhD. Title Defense]{style="color:gray"}
 :::
 
 ::: {.column .left width="35%"}
-**John Doe** 
+**Misbah Shaheen** 
 
-(Senior Data Analyst)
+(GES2302)
 
 
 :::
 :::
 
 <!-- <div class="vl"></div> -->
+
+## Domains of Knowledge
+
+
+- DFT
+- DFPT
+
+
+
+
+
+## Problem Statement
+
+
+
+## Methodology
+
+
+
+## {.center}
+<pre><p style="margin-left: 5em;font-family: GS_L; font-variant: small-caps; font-size:1.5em"><b>The End</pre></b></p></pre>
+
+
+
+<!-- THE END -->
+
+
+# Template (Remove subsequent after completion)
 
 ##
 The next few slides are for a presentation 
