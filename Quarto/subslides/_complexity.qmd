@@ -1,0 +1,71 @@
+WORLD IS COMPLEX!
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+![Water Molecule vs Ocean](_figs/ocean.png){.fragment width=600}
+
+
+
+
+:::
+
+::: {.column width=50%}
+
+![An individual vs Society](_figs/mansociety.png){.fragment width=600}
+
+<!-- ::: {layout-nrow=2}
+
+::: -->
+
+:::
+
+::::
+
+EMERGENCE
+
+
+:::: {.columns}
+
+::: {.column width=33%}
+
+::: {layout-nrow=2}
+![less interactions](_figs/gas.JPG){.fragment width=400}
+
+![Gas](_figs/gas1.JPG){.fragment width=400}
+:::
+
+
+
+
+
+:::
+
+::: {.column width=34%}
+
+
+::: {layout-nrow=2}
+![Intermediate interactions](_figs/liquid.JPG){.fragment width=400}
+
+![Liquid](_figs/liquid1.JPG){.fragment width=400}
+:::
+
+:::
+
+::: {.column width=33%}
+
+
+::: {layout-nrow=2}
+
+![Strong interactions](_figs/solid.JPG){.fragment width=400}
+
+![Solid](_figs/solid1.JPG){.fragment width=400}
+
+
+:::
+
+:::
+
+::::
+
