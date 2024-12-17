@@ -38,7 +38,6 @@ editor: source
 ::::{.columns}
 :::{.column}
 
-
 `r Sys.Date()`
 
 </br> 
@@ -93,11 +92,40 @@ leaflet() %>%
 
 <!-- <div class="vl"></div> -->
 
-## Domains of Knowledge
+## Outline
+
+* Context (Tools)
+    + Basic introduction to many body problem
+    + History: LCAO, Hartree-Fock methods lead to DFT
+    + Tight-binding approaches. (Relevance to 2D materials)
+    + Wannierization
+* Context (Physics)
+    + Tight binding (Hoppings)
+    + Bloch Theorem (Crystal vs. Molecule)
+    + Transport properties
+* Context (Materials)
+    + Perovskites. 
+    + Structure and properties
+    + Stability and bandgap issues
+    + Thermoelectric effects
+    + Band structure
+* Problem statement
+    + Stability
+    + Bandgap tuning
+    + Figure of Merit
+    + Tight-binding insights 
+    + Exciton bindings and Electron-Phonon interactions
+* Proposed approach
+    + DFT
+    + Wannierization
+    + Anion exchange
+    + Doping
+* Requirements
+    + Hard disk for data
+    + HPC/GPU   
 
 
-- DFT
-- DFPT
+
 
 
 ## Many Body Problem
