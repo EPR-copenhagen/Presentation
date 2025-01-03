@@ -1,0 +1,43 @@
+:::: {.timeline}
+
+
+
+:::{.dd-head onclick="toggleBox(this)" }
+
+### 2008
+
+:::
+:::{.dd-box style="font-size:0.75em"}
+- fdvdfvf
+vdfvdfvd
+vdfvdfv
+vdfvdfvdbve
+vdfvefvdfv
+vdfvdvdv
+vdfvdvdv
+vdfvdv
+
+:::
+
+
+### 2021
+
+
+- Event 1: Description of event.
+- dvdfbvdbfv
+
+### 2020
+- Event 2: Description of event.
+
+### 2019
+- Event 3: Description of event.
+
+:::{.tab}
+2000
+
+:::{.tab-content}
+
+fbdbxfgb
+:::
+
+:::

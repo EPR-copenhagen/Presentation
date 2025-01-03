@@ -32,3 +32,42 @@ function toggleBox(header) {
         clickedElement.classList.add('active');
     }
 </script>
+
+<script>
+  // Wait for the document to fully load
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements with the fragment class
+    const fragments = document.querySelectorAll('.fragment');
+    
+    // Add an event listener to each fragment to change its color on click
+    fragments.forEach(function(fragment, index) {
+      fragment.addEventListener('click', function() {
+        // Change the color to red on click
+        fragment.style.color = 'red';
+      });
+    });
+  });
+</script>
+
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>

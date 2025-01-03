@@ -81,6 +81,8 @@
       font-size: 1em;
       font-weight: bold;
       background-size: 40px;
+      width: 200px;
+      height: 150px;
       background-repeat: no-repeat;
       background-position: 15px center;
       text-align: center;
@@ -98,6 +100,20 @@
       display: none; /* Initially hide the container */
     }
 
+    .text-box {
+      border: 2px solid var(--border-color, black);
+      padding: 20px;
+      width: 200px;
+      height: 150px;
+      text-align: center;
+      display: flex;
+      justify-content: center;  /* Centers content horizontally */
+      align-items: center;
+      background-color: transparent;
+      border-radius: 10px;
+    }
+
+    
     .lowkey{
         border-bottom: 3px solid grey;
     }

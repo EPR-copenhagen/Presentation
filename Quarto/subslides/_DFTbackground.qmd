@@ -1,0 +1,193 @@
+:::{.navbar}
+
+[Overview]{.nav-option data-option="option21" onclick="showContent(this)"}
+[Theory]{.nav-option data-option="option23" onclick="showContent(this)"}
+[Method]{.nav-option data-option="option24" onclick="showContent(this)"}
+
+:::
+
+
+:::{#option21Content .content}
+
+::::{.columns}
+:::{.column}
+
+:::{.smaller}
+- Quantum mechanical treatment of electron density
+- Mean field approach and require approximations
+- According to Hohenberg Kohn, it is sufficient to know the electron density of a system to determine its total energy. The many electron wavefunction is not needed. 
+In principle this is enormous simplification,bt in practice approximations must be made
+- Jacob's ladder
+- Why density of electrons?
+
+- Function of only 3 psatial variables insted of 3N variables
+- Physically measurable quantity
+- Can be used to obtain all the quantities in the Hamiltonian
+<blockquote>
+Battery models commonly make  <span style="color:FireBrick">assumptions known to be false,</span> such as describing phase separating materials with Fickian diffusion. 
+
+--[RB Smith](https://dspace.mit.edu/handle/1721.1/111406)
+</blockquote>
+
+:::
+
+:::
+:::{.column}
+
+![](_figs/quad/LinearityMOF.png)
+
+:::
+::::
+
+
+
+
+:::
+
+
+:::{#option23Content .content}
+Solving Schrodinger equation:
+$$
+\hat{H}\psi = E\psi
+$${#eq-schrodinger}
+
+Hamiltonian for complex systems:
+
+
+::: {.fragment .fade-in}
+$$
+\hat{H} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
+- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2 - \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + \sum_{A=1}^{M}\sum_{B>A}^{M} \frac{Z_AZ_B}{r_{AB}}
+$${#eq-Hamiltonian}
+:::
+
+
+::: {.fragment .fade-in}
+::::{.columns}
+:::{.column}
+:::{.text-box style="--border-color: red;"}
+$$
+-\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
+$$
+:::
+:::
+
+:::{.column}
+Kinetic energy of electrons
+:::
+
+::::
+:::
+
+
+
+
+
+
+
+
+
+
+<!-- <span style="color:FireBrick"> *Quiet a mess to find a solution of such systems*</span> -->
+
+<span style="color: FireBrick; text-align: center; display: block;">
+    *Quiet a mess to find a solution of such systems*
+</span>
+
+
+::::{.dd }
+:::{.dd-head onclick="toggleBox(this)"}
+
+Derivation
+
+:::
+:::{.dd-box style="font-size:0.75em"}
+
+To rectify this situation we turn to the classic papers by [(Reinmuth, 1962)](https://pubs.acs.org/doi/pdf/10.1021/ac60191a030), and [(Nicholson and Shain, 1964)](https://pubs.acs.org/doi/10.1021/ac60210a007) and we see that for a semi-infinite linear diffusion reaction of the form $O + ne \rightleftharpoons R$ with only O present initially, the diffusion limited current, $i_D$ , has the general form:
+
+$$
+    i_D = \Lambda \sigma^{1/2} \chi(\sigma t)
+$${#eq-idiffusion}
+
+where $\Lambda$ and $\sigma$ are:
+
+\begin{align}
+    \Lambda &= nFAC_O^*(\pi D_O)^{1/2}\\
+    \sigma &= \frac{nF\nu }{RT} 
+\end{align} 
+
+The normalized current $\chi$ can be given the series expansion:
+
+\begin{align}
+    \chi(\sigma t) &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}(E-E_0) \Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}E + \frac{jnF}{RT}E_0 \Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - \nu t) + \frac{jnF}{RT}E_0\Biggl]}\\
+    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - E_0) \Biggl] exp [j\sigma t]}\\
+    &= \sum_{j=1}^{\infty} d_j exp[j \sigma t]\\
+    &= \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{(j\sigma)^n}{n!}
+    \label{eq-normcurrent}
+\end{align} 
+
+Where the $c_j$ and $d_j$  are expansion coefficients.
+
+Therefore substituting the series expansion for the normalize current into @eq-idiffusion, we see that the diffusion limited current is a function of (2n+1)/2 powers of $\nu$ where $n \in \mathbb{N}$, the set of natural numbers. And the net diffusive current is then:
+:
+$$
+i_D = \Lambda \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{j^n \sigma^{n+1/2}}{n!}
+$${#eq-idiffusion2}
+
+
+We can now extend the model by adding a diffusive correction from the next order term and thereby get a model that is quadratic in :
+$$
+I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
+$${#eq-quadmodel2}
+
+$$
+\frac{I(\nu, V)}{\nu^{1/2}} =  {\beta_1 \nu^{1/2}}+ \beta_2 + \beta_3 \nu + \epsilon
+$${#eq-quadmodel}
+
+where $\beta_i$ are the regression parameters; $I$, $V$, and $\nu$ have their usual meanings and $\epsilon$ again is the noise term. Parameters $\beta_2$ and $\beta_3$ correspond to the diffusion limited Faradaic current but the first parameter, $\beta_1$ would encompass the contribution from the Double Layer (DL) as well as the Faradaic, though non-diffusion limited contribution from pseudocapacitive effects.
+
+:::
+::::
+
+
+:::
+
+
+:::{#option24Content .content}
+
+Like a scout you have to show that you've come prepared and that your statements are backed by data if someone wants to cross check you. 
+
+To do this always have a Supplementary section comprising information that is only to be shown if someone asks the relevant question. 
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
+
+Fitting for the complete set
+
+:::
+:::{.ddm-box}
+
+![](_figs/quad/FigS2.png)
+
+:::
+::::
+
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
+
+Box plots for the complete set
+
+:::
+:::{.ddm-box}
+
+![](_figs/quad/FigS3.png)
+
+:::
+::::
+
+
+
+:::

@@ -64,6 +64,21 @@ text-align: left;
   border-bottom: 0 !important;
 }
 
+/* Highlight */
+
+
+.highlight-red {
+  color: red;
+  transition: color 0.5s ease-in-out;
+}
+
+.highlight-red.visible {
+  color: red; /* Highlight in red on click */
+}
+
+.highlight-red {
+  color: red;
+}
 
 /* Lists */
 

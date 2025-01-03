@@ -2,14 +2,17 @@
 title: "."
 format:
     revealjs:
+        math: true
         title-slide-attributes:
             data-background-image: _figs/treelogo.png
             data-background-size: 50px
+        mermaid:
+            theme: default
         width: 1600
         height: 900
         margin: 0.1
         theme: [default, css/style.scss]
-        css: [css/style.css, css/buttons.css, css/tabs.css, css/callouts.css, css/nav.css, css/revealhacks.css]
+        css: [css/style.css, css/buttons.css, css/tabs.css, css/callouts.css, css/nav.css, css/revealhacks.css, css/mystylecss.css, css/timeline.css]
         subtitle: ""
         author: ""
         toc: FALSE
@@ -22,6 +25,7 @@ format:
         background-transition: fade
         logo: _figs/treelogo.png
         ligthbox: auto
+
         engine: jupyter            
 
 include-in-header:
@@ -43,24 +47,14 @@ editor: source
 </br> 
 
 Presenter: Misbah Shaheen
-Reg No.: ####
-Supervisor: []
-Co-supervisor: []
+Reg No.: ES 2302
+Supervisor: Dr. Sheharyar Pervez
 
 
 :::
 :::{.column}
  
-
-<!-- 
-```{r}
-
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=72.64211517160314, lat=34.06960235636041, popup="Here we are")
-
-``` -->
+ 
 
 :::
 ::::
@@ -128,19 +122,18 @@ leaflet() %>%
 
 
 
-## Many Body Problem
+<!-- ## Many Body Problem
 {{< include subslides/_manybodyproblem.qmd >}}
+ -->
+
+<!-- ## Many Body Problem {.scrollable}
+{{< include subslides/_complexity.qmd >}} -->
+
+<!-- ## Problem Statement
+ -->
 
 
-## Many Body Problem {.scrollable}
-{{< include subslides/_complexity.qmd >}}
-
-## Problem Statement
-
-
-
-## Methodology
-
+<!-- ## Methodology -->
 
 
 ## {.center}
@@ -200,11 +193,14 @@ Powerpoint presentations too often resemble a schoolplay - very loud, very slow,
 
 
 
-# Powerpoint is for Plebians. 
+# Density Functional Theory 
 
-## Dazzle Your Audience by Doing What Powerpoint Can't {.scrollable}
+## Bried History of Computational Methods
+{{< include subslides/_DFThistory.qmd >}}
 
-{{< include subslides/_technicalbackground.qmd >}}
+## DFT Background {.scrollable}
+
+{{< include subslides/_DFTbackground.qmd >}}
 
 
 ## {.scrollable}
