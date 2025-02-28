@@ -1,0 +1,156 @@
+<div style="color:FireBrick; text-align:center">
+
+*Implement computationally efficient Wannierization on anion exchnaged and point defected Lead Halide Perovskites*
+</div>
+
+:::{.navbar}
+
+[Wannierization and Tight Binding]{.nav-option data-option="option31" onclick="showContent(this)"}
+[Anion Exchange and Point Defects]{.nav-option data-option="option32" onclick="showContent(this)"}
+
+:::
+
+:::{#option31Content .content .scrollable}
+
+
+:::{.panel-tabset}
+
+
+### Wannierization
+
+:::{.columns}
+
+:::{.column width=40%}
+
+- Unitary transformation of Bloc
+h functions
+- Localized in space
+- Translation images of each other
+- Forms orthonormal set
+$$w_{n,k}(r) = \frac{1}{\sqrt N} \sum_N e^{-ik.R} \psi_k(r)$$
+
+<div style="color:FireBrick; text-align:center">
+
+Scales linearly with system's size
+
+</div>
+
+:::
+
+
+:::{.column width=60%}
+
+![](_figs/WFs.png){width=100%}
+
+:::
+
+:::
+
+
+### Tight Binding
+:::{.columns}
+
+:::{.column width=65%}
+- Model to analyze energy bands in a crystal
+- Complete wavefunction can be written as the sum of wannier functions
+- Corresponds to LCAO method
+- Electron under the influence of other atoms are treat as perturbation
+
+$$\hat{H} = \hat{H_m} + V_{\phi_{1}} + V_{\phi_{1}}$$
+
+Energy eigen value is computed as the expectation value:
+
+
+$$
+\begin{bmatrix}
+\langle \phi_1|\hat{H}|\phi_1 \rangle   &    \langle \phi_1|\hat{H}|\phi_2 \rangle\\
+\langle \phi_2|\hat{H}|\phi_1 \rangle   &    \langle \phi_2|\hat{H}|\phi_2 \rangle
+\end{bmatrix} 
+=
+\begin{bmatrix}
+E_{11}   &   t_{12}\\
+t_{21}   &    E_{22}
+\end{bmatrix}
+$$
+:::
+
+:::{.column width=35%}
+![](_figs/TB.png){width=100%}
+
+
+
+:::
+
+:::
+
+:::
+
+:::
+
+
+:::{#option32Content .content .scrollable}
+
+::::{.columns}
+:::{.column width=40%}
+
+:::: {.ddm style="font-size:0.63em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
+
+Anion Exchange
+
+:::
+
+:::{.ddm-box style="font-family:GS_L; border-color:transparent"}
+
+$$ Br_3 \to Br_2I \to BrI_2 \to I_3$$
+
+:::
+
+::::
+
+
+
+:::: {.ddm style="font-size:0.63em; font-family:Ubuntu Mono; line-height:0; margin-bottom: 0px; margin-top: 0px"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
+
+Point Defects
+
+:::
+
+:::{.ddm-box style="font-family:GS_L;border-color:transparent; font-size:1.2em"}
+
+<div>
+Kroger-Vink notation
+</div>
+
+- $$V_{Pb}^{\prime \prime}$$
+- $$M_{Pb}^{(q-2).}$$
+- $$M_{Pb}^{(q-2)\prime}$$
+:::
+
+::::
+
+
+:::
+
+
+
+
+
+:::{.column width=60%}
+
+:::{.panel-tabset}
+### Anion Exchange
+![Anion Ecxchange](_figs/anionexchange.png){#fig-schema width=80% fig-align="center"}
+
+
+### Point Defects
+![Point Defect](_figs/Pbvac.png){#fig-schema width=80% fig-align="center"}
+
+:::
+
+:::
+
+
+::::
+:::

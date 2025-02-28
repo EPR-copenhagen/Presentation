@@ -1,0 +1,38 @@
+
+$$
+E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}[\rho]
+$${#eq-functional}
+
+
+$$
+E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}^{classical}[\rho] + E_{XC}[\rho]
+$${#eq-functional}
+
+
+
+<div style="color:FireBrick; text-align:center">
+
+
+*The explicit form of $T[\rho]$ and $E_{XC}$ is the major challenge of DFT*
+
+</div>
+
+
+
+$$
+E_{KS}[\rho] = \overbrace{T_s[\rho] + E_{Ne}[\rho] +  E_{ee}^{classical}[\rho]}^\textit{known functionals} + \overbrace{E_{ee}^{XC}[\rho]}^\textit{unknown functionals}
+$${#eq-functional}
+
+$E_{XC}$ includes:
+
+- Exchange and correlation energy
+- Correction of Kinetic energy term $\Delta T_{\rho}[\rho]$
+
+<!-- <div style="color:FireBrick; text-align:left">
+
+What we do not know is exchange and correlation functional $E_{XC}$ containing:
+
+</div>
+
+- Correction of kinetic energy
+- Exchange and correlation energy -->

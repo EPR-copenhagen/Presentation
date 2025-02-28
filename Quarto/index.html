@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f21b04ba027dc91cee5871c6466446b1.css">
   <link rel="stylesheet" href="css/style.css">
@@ -103,6 +38,7 @@
   <link rel="stylesheet" href="css/revealhacks.css">
   <link rel="stylesheet" href="css/mystylecss.css">
   <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/flip.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -194,14 +130,6 @@
       margin-right: 0; 
     }
   </style>
-  <script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-  <link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
-  <script type="ojs-define">
-
-  {"contents":[{"name":"actors","value":{"x":[-1.8283,-1.9702,0.4452,0.9992,-0.6918,-0.0482,3.0148,-0.9367,0.6899,0.2554,-2.1748,1.5302,-1.2861,1.3656,0.5232,0.493,0.7467,0.484,0.6128,-1.0506,1.1344,0.5785,-0.5301,0.2349,-0.0089,-0.0794,-0.4268,1.0481,-0.5482,0.5138,-0.5965,-0.0763,-0.6093,-1.172,-1.7016,-0.2819,-0.8542,1.5835,-1.5995,0.9602,-0.568,-0.2446,2.007,-0.1953,0.0653,-0.476,0.589,0.8217,1.5341,-1.5863,-1.1835,1.3092,-1.3261,0.3635,-0.3403,1.0603,1.3916,1.8013,-1.1898,-1.4429,-0.1219,1.2327,0.1714,-0.4083,1.0721,-0.8952,0.4678,-0.9035,-0.1242,1.3133,-0.2139,-1.2841,1.5204,1.3421,1.3035,-0.7546,0.3928,-0.5598,-0.0193,1.1836,-1.7589,0.1988,-0.0683,-0.5416,0.0523,0.7937,1.6821,0.6764,-2.1801,-0.4131,0.0111,0.0517,-1.5475,0.9219,-1.9433,-0.1552,2.0228,0.7267,-0.1712,0.254],"y":[-0.5151,0.2585,-0.8019,2.0412,1.7011,0.5424,-2.0166,0.1625,1.7938,-1.36,0.859,1.7247,0.2436,-1.8176,-1.0158,-0.5115,0.1647,-1.2126,-1.6458,0.1742,1.1191,-0.8989,0.4048,-0.8503,1.2325,0.6662,-0.8,0.6945,-0.7317,2.8427,-1.2985,0.1794,-0.0909,-0.6207,0.499,-0.3603,1.1177,-0.4871,-0.9947,-0.9812,0.0669,-1.3015,2.5389,0.9373,-0.2289,0.4519,-0.6498,-0.3084,-1.0633,0.4436,-0.1863,1.3725,-0.578,-1.3227,-0.0193,0.8482,2.9515,0.5797,1.695,0.3031,0.8417,0.6998,0.7179,1.2409,-1.3478,-1.0932,0.7183,0.3016,-0.5872,-1.6095,0.8349,-0.5349,-0.6102,0.5403,-0.6411,-0.4366,1.0579,-1.1491,-0.9294,0.6623,1.159,-2.002,-0.6257,0.5675,0.2195,-0.9724,-0.0378,0.0723,0.3358,-0.2051,-0.7599,0.938,0.0467,0.4777,-0.4741,-1.353,-0.0174,0.0493,0.1692,-0.4314]}}]}
-
-  </script>
-
   <script src="scripts/jquery-3.6.4.min.js"></script>
 
   <script src="scripts/LeaderLine/leader-line.min.js"></script>
@@ -218,7 +146,7 @@
 
   function toggleBox(header) {
 
-      $(header).next('.dd-box, .ddm-box').slideToggle("slow");
+      $(header).next('.dd-box, .ddm-box, .ddm-box-2border').slideToggle("slow");
 
   }
 
@@ -306,45 +234,74 @@
 
   <script>
 
-  function openCity(evt, cityName) {
+  // When the user clicks on div, open the popup
 
-    // Declare all variables
+  function popup() {
 
-    var i, tabcontent, tablinks;
+    var popup = document.getElementById("myPopup");
 
-  
-
-    // Get all elements with class="tabcontent" and hide them
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-
-    for (i = 0; i < tabcontent.length; i++) {
-
-      tabcontent[i].style.display = "none";
-
-    }
-
-  
-
-    // Get all elements with class="tablinks" and remove the class "active"
-
-    tablinks = document.getElementsByClassName("tablinks");
-
-    for (i = 0; i < tablinks.length; i++) {
-
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-
-    }
-
-  
-
-    // Show the current tab, and add an "active" class to the link that opened the tab
-
-    document.getElementById(cityName).style.display = "block";
-
-    evt.currentTarget.className += " active";
+    popup.classList.toggle("show");
 
   }
+
+  </script>
+
+  
+
+  
+
+  
+
+  <script>
+
+  document.querySelector('.ddm-box').classList.add('show-arrow'); // Adds downward arrow
+
+  document.querySelector('.ddm-box').classList.add('show-up-arrow'); // Adds upward arrow
+
+  </script>
+
+  
+
+  
+
+  <script>
+
+  function flip(element) {
+
+    element.classList.toggle("flip-active");
+
+  }
+
+  
+
+  </script>
+  <script>
+
+  document.addEventListener("click", function (e) {
+
+    if (e.target.classList.contains("collapsible")) {
+
+        e.target.classList.toggle("open");
+
+        const nextContent = e.target.nextElementSibling;
+
+        if (nextContent && nextContent.classList.contains("content")) {
+
+            nextContent.style.display =
+
+                nextContent.style.display === "block" ? "none" : "block";
+
+        }
+
+    }
+
+  }
+
+  
+
+  );
+
+  
 
   </script>
 </head>
@@ -352,7 +309,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="_figs/treelogo.png" data-background-size="50px" class="quarto-title-block center">
+<section id="title-slide" data-background-size="50px" class="quarto-title-block center">
   <h1 class="title">.</h1>
 
 <div class="quarto-title-authors">
@@ -361,470 +318,241 @@
 </section>
 <section id="section" class="slide level2 center">
 <h2></h2>
-<h4 id="title-goes-here">Title goes here</h4>
-<div class="columns">
-<div class="column">
-<p>2025-01-02</p>
-<p><br></p>
-<p>Presenter: Misbah Shaheen Reg No.: ES 2302 Supervisor: Dr.&nbsp;Sheharyar Pervez</p>
-</div><div class="column">
-
-</div></div>
-</section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
 <!-- ![](_figs/treelogo.png){width="1%"} -->
 <div class="columns">
 <div class="column right" style="width:65%;">
-<p><span style="color:teal"><strong>Title: something something ab initio</strong></span></p>
+<p><span style="color:teal; font-size: 1.3em"><strong>DFT Leveraged Tight Binding Insights Into Disordered Perovskites</strong></span></p>
 <p><span style="color:gray">PhD. Title Defense</span></p>
-</div><div class="column left" style="width:35%;">
-<p><strong>Misbah Shaheen</strong></p>
-<p>(GES2302)</p>
+<p><span style="color:gray"><em>Faculty of Engineering Sciences</em></span></p>
+<p><span style="color:gray"><em>Ghulam Ishaq Khan Institute of Engineering Sciences and Technology</em></span></p>
+</div><div class="column" style="width:35%;">
+<p style="margin-left: 50px;">
+<strong>Misbah Shaheen</strong>
+</p>
+<p style="margin-left: 50px;">
+ES2302
+</p>
+<p style="margin-left: 50px;">
+Supervisor: Dr.&nbsp;Sheharyar Pervez
+</p>
 </div></div>
 <!-- <div class="vl"></div> -->
 </section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
-<ul>
-<li>Context (Tools)
-<ul>
-<li>Basic introduction to many body problem</li>
-<li>History: LCAO, Hartree-Fock methods lead to DFT</li>
-<li>Tight-binding approaches. (Relevance to 2D materials)</li>
-<li>Wannierization</li>
-</ul></li>
-<li>Context (Physics)
-<ul>
-<li>Tight binding (Hoppings)</li>
-<li>Bloch Theorem (Crystal vs.&nbsp;Molecule)</li>
-<li>Transport properties</li>
-</ul></li>
-<li>Context (Materials)
-<ul>
-<li>Perovskites.</li>
-<li>Structure and properties</li>
-<li>Stability and bandgap issues</li>
-<li>Thermoelectric effects</li>
-<li>Band structure</li>
-</ul></li>
-<li>Problem statement
-<ul>
-<li>Stability</li>
-<li>Bandgap tuning</li>
-<li>Figure of Merit</li>
-<li>Tight-binding insights</li>
-<li>Exciton bindings and Electron-Phonon interactions</li>
-</ul></li>
-<li>Proposed approach
-<ul>
-<li>DFT</li>
-<li>Wannierization</li>
-<li>Anion exchange</li>
-<li>Doping</li>
-</ul></li>
-<li>Requirements
-<ul>
-<li>Hard disk for data</li>
-<li>HPC/GPU</li>
-</ul></li>
-</ul>
-<!-- ## Many Body Problem
-
-
-
-:::{.navbar}
-
-[Overview]{.nav-option data-option="option11" onclick="showContent(this)"}
-[Schematics]{.nav-option data-option="option12" onclick="showContent(this)"}
-[Problem]{.nav-option data-option="option13" onclick="showContent(this)"}
-[Philosophy]{.nav-option data-option="option14" onclick="showContent(this)"}
-[Solution]{.nav-option data-option="option15" onclick="showContent(this)"}
-[Model]{.nav-option data-option="option16" onclick="showContent(this)"}
-[Supplementary]{.nav-option data-option="option17" onclick="showContent(this)"}
-
-:::
-
-:::{#option11Content .content .scrollable}
-
-::::{.columns}
-:::{.column width=16%} 
-
-:::: {.ddm style="font-size:0.63em; line-height:0"}
-:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
-
-Phenomenon A
-
-:::
-:::{.ddm-box style="font-family:GS_L"}
-
-Drop down menus show cues which differentiate phenomenon A from B
-
-:::
-::::
-
-:::
-:::{.column width=68%}
-
-![Classical capacitive and diffusive modes of energy storage.](_figs/capdiffclassical.png){#fig-schema width=90% fig-align="center"}
-
-:::
-
-
-:::{.column width=16%} 
-
-:::: {.ddm style="font-size:0.63em; font-family:Ubuntu Mono; line-height:0; margin-bottom: 0px; margin-top: 0px"}
-:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B"}
-
-Phenomenon B
-
-:::
-:::{.ddm-box style="font-family:GS_L"}
-
-Suitable for making situations in which you have competing phenomena such as here.
-
-:::
-::::
-
-
-:::
-
-::::
-
-:::
-
-:::{#option12Content .content .scrollable}
-
-
-:::{.panel-tabset}
-### Flowchart
-![General scheme of electrochemical contributions.](_figs/flowchart.png){#fig-schema width=90% fig-align="center"}
-
-### Schema
-![Kant's Schema.](_figs/sample/kant.png){#fig-schema fig-align="center" width=90%}
-
-### Another
-![Another schema.](_figs/sample/marx.png){#fig-schema2 fig-align="center"}
-:::
-
-
-
-
-:::
-
-
-:::{#option13Content .content .scrollable}
-
-Present your data in tabs that you can go back and forth between. 
-
-::::{.columns}
-:::{.column}
-
-<blockquote>
-<span style="color:DimGray; font-size:0.65em; line-height: 0">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span style="color:FireBrick"> aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br></br>-- Cicero (I never said that, 45 BCE)
-</span>
-</blockquote>
-
-:::
-:::{.column}
-
-<blockquote>
-<span style="color:DimGray; font-size:0.65em; line-height: 0">
- In dictum porttitor magna, pulvinar lobortis ex consequat quis. Suspendisse potenti. Suspendisse faucibus, <span style="color:FireBrick"> ante a finibus consequat, nunc erat ultricies neque, non rutrum turpis tortor sit amet tortor.</span> Donec vitae quam et tellus iaculis bibendum. Curabitur varius massa mauris, ut pellentesque ipsum vulputate sed. Integer aliquam iaculis dolor sit amet auctor. Sed pretium neque eu lacus cursus dignissim non sed neque. Proin pulvinar massa sit amet justo tincidunt fringilla. Sed a magna fermentum, ultricies odio non, vulputate ipsum. Sed euismod odio ut lacinia porttitor. Praesent porta vulputate euismod. Donec sagittis libero quis mattis sollicitudin. 
-</br></br></br>- Cicero (Like Why Would I, 43 BCE)
-</span>
-
-</blockquote>
-
-
-:::
-::::
-
-
-
-
-:::
-
-
-
-
-:::{#option14Content .content}
-
-::::{.columns}
-:::{.column}
-
-:::{.smaller}
-Attention must be paid to the underlying assumptions before applying the model. 
-
-<blockquote>
-Battery models commonly make  <span style="color:FireBrick">assumptions known to be false,</span> such as describing phase separating materials with Fickian diffusion. 
-
---[RB Smith](https://dspace.mit.edu/handle/1721.1/111406)
-</blockquote>
-
-:::
-
-:::
-:::{.column}
-
-![](_figs/quad/LinearityMOF.png)
-
-:::
-::::
-
-
-
-
-:::
-
-
-:::{#option15Content .content}
-
-Your solution goes here. 
-
-
-:::
-
-:::{#option16Content .content}
-
-Minimize mathematical derivations but keep them at hand in case someone needs them. 
-
-$$
-I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
-$${#eq-quadraticmodel1}
-
-Dividing by $\nu^{1/2}$ gives us a model that is quadratic in $\nu^{1/2}$:
-
-$$
-\frac{I(\nu, V)}{\nu^{1/2}} =  \beta_1 \nu^{1/2} + \beta_2 + \beta_3 \nu + \epsilon
-$${#eq-quadraticmodel2}
-
-And it is this model that we will test.
-
-
-::::{.dd }
-:::{.dd-head onclick="toggleBox(this)"}
-
-Derivation
-
-:::
-:::{.dd-box style="font-size:0.75em"}
-
-To rectify this situation we turn to the classic papers by [(Reinmuth, 1962)](https://pubs.acs.org/doi/pdf/10.1021/ac60191a030), and [(Nicholson and Shain, 1964)](https://pubs.acs.org/doi/10.1021/ac60210a007) and we see that for a semi-infinite linear diffusion reaction of the form $O + ne \rightleftharpoons R$ with only O present initially, the diffusion limited current, $i_D$ , has the general form:
-
-$$
-    i_D = \Lambda \sigma^{1/2} \chi(\sigma t)
-$${#eq-idiffusion}
-
-where $\Lambda$ and $\sigma$ are:
-
-\begin{align}
-    \Lambda &= nFAC_O^*(\pi D_O)^{1/2}\\
-    \sigma &= \frac{nF\nu }{RT} 
-\end{align} 
-
-The normalized current $\chi$ can be given the series expansion:
-
-\begin{align}
-    \chi(\sigma t) &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}(E-E_0) \Biggl]}\\
-    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}E + \frac{jnF}{RT}E_0 \Biggl]}\\
-    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - \nu t) + \frac{jnF}{RT}E_0\Biggl]}\\
-    &= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - E_0) \Biggl] exp [j\sigma t]}\\
-    &= \sum_{j=1}^{\infty} d_j exp[j \sigma t]\\
-    &= \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{(j\sigma)^n}{n!}
-    \label{eq-normcurrent}
-\end{align} 
-
-Where the $c_j$ and $d_j$  are expansion coefficients.
-
-Therefore substituting the series expansion for the normalize current into @eq-idiffusion, we see that the diffusion limited current is a function of (2n+1)/2 powers of $\nu$ where $n \in \mathbb{N}$, the set of natural numbers. And the net diffusive current is then:
-:
-$$
-i_D = \Lambda \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{j^n \sigma^{n+1/2}}{n!}
-$${#eq-idiffusion2}
-
-
-We can now extend the model by adding a diffusive correction from the next order term and thereby get a model that is quadratic in :
-$$
-I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
-$${#eq-quadmodel2}
-
-$$
-\frac{I(\nu, V)}{\nu^{1/2}} =  {\beta_1 \nu^{1/2}}+ \beta_2 + \beta_3 \nu + \epsilon
-$${#eq-quadmodel}
-
-where $\beta_i$ are the regression parameters; $I$, $V$, and $\nu$ have their usual meanings and $\epsilon$ again is the noise term. Parameters $\beta_2$ and $\beta_3$ correspond to the diffusion limited Faradaic current but the first parameter, $\beta_1$ would encompass the contribution from the Double Layer (DL) as well as the Faradaic, though non-diffusion limited contribution from pseudocapacitive effects.
-
-:::
-::::
-
-
-:::
-
-
-:::{#option17Content .content}
-
-
-
-Show that you've come prepared and that your statements are backed by data if someone wants to cross check you. 
-
-To do this always have a Supplementary section comprising information that is only to be shown if someone asks the relevant question. 
-
-::::{.ddm}
-:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
-
-Delhi Sultnate
-:::
-:::{.ddm-box}
-
-![](_figs/sample/delhi.png)
-
-:::
-::::
-
-
-::::{.ddm}
-:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;"}
-
-Mughal Empire
-
-:::
-:::{.ddm-box}
-
-![](_figs/sample/mughal.jpg)
-
-:::
-::::
-
-
-
-:::
-
-
-
- -->
-<!-- ## Many Body Problem {.scrollable}
-{{< include subslides/_complexity.qmd >}} -->
-<!-- ## Problem Statement
- -->
-<!-- ## Methodology -->
-</section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<pre><p style="margin-left: 5em;font-family: GS_L; font-variant: small-caps; font-size:1.5em"><b>The End</b></p></pre><b>
-</b>
-<p></p>
-
-<!-- THE END -->
-</section>
 <section>
-<section id="template-remove-subsequent-after-completion" class="title-slide slide level1 center">
-<h1>Template (Remove subsequent after completion)</h1>
-
+<section id="introduction-to-density-functional-theory" class="title-slide slide level1 center">
+<h1>Introduction to Density Functional Theory</h1>
+<!-- ## Brief History of Computational Methods
+{{< include subslides/_DFThistory.qmd >}} -->
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>The next few slides are for a presentation</p>
-</section>
-<section id="navigating-a-forest-an-analogy" class="slide level2">
-<h2>Navigating a forest (an analogy)</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div>
-<ul>
-<li class="fragment">Analogies help setting the stage.</li>
-<li class="fragment">The space of data is huge and charting it is like surveying a forest</li>
-<li class="fragment">To find a tree that bears a special fruit we can go about in two ways:
-<ul>
-<li class="fragment">Walk through the forest and examine the trees one after another.</li>
-<li class="fragment">Take a bird’s eye view of the forest, identify pockets of interest, and then zero in.</li>
-</ul></li>
-</ul>
-</div>
-</div><div class="column" style="width:30%;">
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img data-src="_figs/ground-forest.jpg" width="400"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img data-src="_figs/aerial-forest.jpg" class="fragment" width="400"></p>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="medium-is-message" class="slide level2">
-<h2>Medium is Message</h2>
-<p>Arrange information side by side to make elegant comparisons.</p>
-<div class="columns">
-<div class="column">
-<h4 id="approach-a-powerpoint">Approach A: Powerpoint</h4>
-<p>Powerpoint’s presentation structures can be rigid and uninteractive.</p>
-<p>Presentations usually only go in the direction the presenter arranged it.</p>
-<p>How many times have you found yourself jumping around slides in response to a question from the audience?</p>
-</div><div class="column">
-<h4 id="approach-b-html">Approach B: HTML</h4>
-<p>HTML presentations can make presentations more dynamic.</p>
-</div></div>
-<p>Quotations create context and continuity:</p>
-<blockquote>
-<p>Powerpoint presentations too often resemble a schoolplay - very loud, very slow, and very simple.<sup>🗡</sup></p>
-<p>– Edward Tufte</p>
-<ul>
-<li>Emojis help audience make quick evaluations and release tension</li>
-</ul>
-</blockquote>
-</section></section>
-<section>
-<section id="density-functional-theory" class="title-slide slide level1 center">
-<h1>Density Functional Theory</h1>
-
-</section>
-<section id="bried-history-of-computational-methods" class="slide level2">
-<h2>Bried History of Computational Methods</h2>
-<div class="timeline">
-<section id="section-4" class="dd-head" onclick="toggleBox(this)">
-<h3>2008</h3>
-</section>
-<div class="dd-box" style="font-size:0.75em">
-<ul>
-<li>fdvdfvf vdfvdfvd vdfvdfv vdfvdfvdbve vdfvefvdfv vdfvdvdv vdfvdvdv vdfvdv</li>
-</ul>
-</div>
-<h3 id="section-5">2021</h3>
-<ul>
-<li>Event 1: Description of event.</li>
-<li>dvdfbvdbfv</li>
-</ul>
-<h3 id="section-6">2020</h3>
-<ul>
-<li>Event 2: Description of event.</li>
-</ul>
-<h3 id="section-7">2019</h3>
-<ul>
-<li>Event 3: Description of event.</li>
-</ul>
-<div class="tab">
-<p>2000</p>
-<div class="tab-content">
-<p>fbdbxfgb</p>
-</div>
-</div>
-<section id="dft-background" class="slide level2 scrollable">
-<h2>DFT Background</h2>
+<section id="background" class="slide level2 scrollable">
+<h2>Background</h2>
 <div class="navbar">
-<p><span class="nav-option" data-option="option21" onclick="showContent(this)">Overview</span> <span class="nav-option" data-option="option23" onclick="showContent(this)">Theory</span> <span class="nav-option" data-option="option24" onclick="showContent(this)">Method</span></p>
+<p><span class="nav-option" data-option="option11" onclick="showContent(this)">Overview</span> <span class="nav-option" data-option="option12" onclick="showContent(this)">History</span> <span class="nav-option" data-option="option13" onclick="showContent(this)">Theory</span></p>
 </div>
-<div id="option21Content" class="content">
+<div id="option11Content" class="content">
 <div class="columns">
-<div class="column">
+<div class="column" style="width:50%;">
+<div style="color:#0a6774; text-align:center">
+<p><strong>Many Body Problem</strong></p>
+<p><em>WORLD IS COMPLEX!</em></p>
+</div>
+<div class="flip-box" onclick="flip(this)">
+<div class="flip-box-inner">
+<div class="flip-box-front">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_figs/ocean.png"></p>
+<figcaption>Water Molecule vs Ocean</figcaption>
+</figure>
+</div>
+</div>
+<div class="flip-box-back">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_figs/mansociety.png"></p>
+<figcaption>An Individual vs Society</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-in">
+<div style="color:#0a6774; text-align:center">
+<p><strong>EMERGENCE</strong></p>
+</div>
+</div>
+<div style="position: relative; width: 600px; height: 400px;">
+<p><img data-src="_figs/gas.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <img data-src="_figs/liquid.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <img data-src="_figs/solid.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></p>
+</div>
+<div class="fragment fade-in">
+<div style="color:FireBrick; text-align:center">
+<p><em>Collectivity creates new patterns</em></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="option12Content" class="content">
+<div class="center-line">
+
+</div>
+<!-- :::{.fragment .fade-in .vertical-line style="top:8em; left: 4em; height:10%"}
+::: -->
+<!-- Dropdown -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:9em; left:2em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1927</p>
+</div>
+<div class="ddm-box-2border show-up-arrow" style="position:absolute; top:14em; left:2em">
+<p>Thomas-Fermi<br>
+Model</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute; top:9em; left:6em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1959</p>
+</div>
+<div class="ddm-box-2border show-arrow" style="position:absolute;top:6em; left:2.5em">
+<p>Pseudopotentials</p>
+</div>
+</div>
+<!-- Dropup-although not exactly -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute; top:9em; left:10em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1964</p>
+</div>
+<div class="ddm-box-2border show-up-arrow" style="position:absolute;top:13.5em; left:10.5em">
+<p>Hohenberg-Kohn<br>
+Theorems</p>
+</div>
+<!-- :::{.arrow-down style="position:absolute;top:12em; left:7em"}
+::: -->
+</div>
+<!-- Dropdown -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:9em; left:14em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1965</p>
+</div>
+<div class="ddm-box-2border show-arrow" style="position:absolute;top:5.5em; left:13em">
+<p>Kohn-Sham<br>
+Scheme</p>
+</div>
+</div>
+<!-- Dropup -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute; top:9em; left:18em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1972</p>
+</div>
+<div class="ddm-box-2border show-up-arrow" style="position:absolute;top:14em; left:20.5em">
+<p>Relativistic Effects</p>
+</div>
+</div>
+<!-- Dropdown -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:9em; left:22em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1980s</p>
+</div>
+<div class="ddm-box-2border show-arrow" style="position:absolute;top:4em; left:23.5em">
+<ul>
+<li>LDA</li>
+<li>TDDFT</li>
+<li>DFPT</li>
+</ul>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:9em; left:26em; width:2em; height:1.75em; border-bottom: transparent">
+<p>1990s</p>
+</div>
+<div class="ddm-box-2border show-up-arrow" style="position:absolute;top:14.5em; left:29.5em">
+<ul>
+<li>MLWFs</li>
+<li>Hubbard Correction</li>
+<li>XC functionals</li>
+<li>GGA</li>
+</ul>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:9em; left:30em; width:em; height:1.75em; border-bottom: transparent">
+<p>Post 2000</p>
+</div>
+<div class="ddm-box-2border show-arrow" style="position:absolute;top:2em; left:30em">
+<ul>
+<li>New XC functionals</li>
+<li>GW approximation</li>
+<li>Topological Materials</li>
+<li>Machine Learning</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="option13Content" class="content">
+<p>Solving Schrodinger equation: <span id="eq-schrodinger"><span class="math display">\[
+\hat{H}\psi = E\psi
+\qquad(1)\]</span></span></p>
+<p>Hamiltonian for complex systems:</p>
+<!-- $$
+\hat{H} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
+- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2 - \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + \sum_{A=1}^{M}\sum_{B>A}^{M} \frac{Z_AZ_B}{r_{AB}}
+$${#eq-Hamiltonian} -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:2em; width:5em; height:5em;background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+-\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:2em;width:6em;height:3em">
+<p>Kinetic Energy of Electrons</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:7em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:20em; left:7em;width:6em;height:3em">
+<p>Kinetic Energy of <em>Nuclei</em></p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:14em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+- \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}}
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:14em;width:6em;height:4em">
+<p>Electron-Nuclei Interaction</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:20em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
++ \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}}
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:20em; left:20em;width:6em;height:4em">
+<p>Electron-Electron Interaction</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:26em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span id="eq-schrodinger"><span class="math display">\[
++ \sum_{A=1}^{M}\sum_{B&gt;A}^{M} \frac{Z_AZ_B}{r_{AB}}
+\qquad(2)\]</span></span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:26em;width:6em;height:3em">
+<p>Nuclei-Nuclei Interaction</p>
+</div>
+</div>
+<div class="fragment fade-in">
+<div style="color:FireBrick; text-align:center; margin-top:15em">
+<p><em>Quiet a mess to find a solution of such systems</em></p>
+</div>
+</div>
+</div>
+<div id="option13Content" class="content">
 <div class="smaller">
 <ul>
 <li><p>Quantum mechanical treatment of electron density</p></li>
@@ -834,493 +562,401 @@ Mughal Empire
 <li><p>Why density of electrons?</p></li>
 <li><p>Function of only 3 psatial variables insted of 3N variables</p></li>
 <li><p>Physically measurable quantity</p></li>
-<li><p>Can be used to obtain all the quantities in the Hamiltonian</p>
-<blockquote>
-<p>Battery models commonly make <span style="color:FireBrick">assumptions known to be false,</span> such as describing phase separating materials with Fickian diffusion.</p></blockquote></li>
+<li><p>Can be used to obtain all the quantities in the Hamiltonian</p></li>
 </ul>
-–<a href="https://dspace.mit.edu/handle/1721.1/111406">RB Smith</a>
-
-</div>
-</div><div class="column">
-<p><img data-src="_figs/quad/LinearityMOF.png"></p>
-</div></div>
-</div>
-<div id="option23Content" class="content">
-<p>Solving Schrodinger equation: <span id="eq-schrodinger"><span class="math display">\[
-\hat{H}\psi = E\psi
-\qquad(1)\]</span></span></p>
-<p>Hamiltonian for complex systems:</p>
-<div class="fragment fade-in">
-<p><span id="eq-Hamiltonian"><span class="math display">\[
-\hat{H} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
-- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2 - \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}} + \sum_{A=1}^{M}\sum_{B&gt;A}^{M} \frac{Z_AZ_B}{r_{AB}}
-\qquad(2)\]</span></span></p>
-</div>
-<div class="fragment fade-in">
-<div class="columns">
-<div class="column">
-<div class="text-box" style="--border-color: red;">
-<p><span class="math display">\[
--\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
-\]</span></p>
-</div>
-</div><div class="column">
-<p>Kinetic energy of electrons</p>
-</div></div>
-</div>
-<!-- <span style="color:FireBrick"> *Quiet a mess to find a solution of such systems*</span> -->
-<p><span style="color: FireBrick; text-align: center; display: block;"> <em>Quiet a mess to find a solution of such systems</em> </span></p>
-<div class="dd">
-<div class="dd-head" onclick="toggleBox(this)">
-<p>Derivation</p>
-</div>
-<div class="dd-box" style="font-size:0.75em">
-<p>To rectify this situation we turn to the classic papers by <a href="https://pubs.acs.org/doi/pdf/10.1021/ac60191a030">(Reinmuth, 1962)</a>, and <a href="https://pubs.acs.org/doi/10.1021/ac60210a007">(Nicholson and Shain, 1964)</a> and we see that for a semi-infinite linear diffusion reaction of the form <span class="math inline">\(O + ne \rightleftharpoons R\)</span> with only O present initially, the diffusion limited current, <span class="math inline">\(i_D\)</span> , has the general form:</p>
-<p><span id="eq-idiffusion"><span class="math display">\[
-    i_D = \Lambda \sigma^{1/2} \chi(\sigma t)
-\qquad(3)\]</span></span></p>
-<p>where <span class="math inline">\(\Lambda\)</span> and <span class="math inline">\(\sigma\)</span> are:</p>
-<p><span class="math display">\[\begin{align}
-    \Lambda &amp;= nFAC_O^*(\pi D_O)^{1/2}\\
-    \sigma &amp;= \frac{nF\nu }{RT}
-\end{align}\]</span></p>
-<p>The normalized current <span class="math inline">\(\chi\)</span> can be given the series expansion:</p>
-<p><span class="math display">\[\begin{align}
-    \chi(\sigma t) &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}(E-E_0) \Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}E + \frac{jnF}{RT}E_0 \Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - \nu t) + \frac{jnF}{RT}E_0\Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - E_0) \Biggl] exp [j\sigma t]}\\
-    &amp;= \sum_{j=1}^{\infty} d_j exp[j \sigma t]\\
-    &amp;= \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{(j\sigma)^n}{n!}
-    \label{eq-normcurrent}
-\end{align}\]</span></p>
-<p>Where the <span class="math inline">\(c_j\)</span> and <span class="math inline">\(d_j\)</span> are expansion coefficients.</p>
-<p>Therefore substituting the series expansion for the normalize current into <a href="#/eq-idiffusion" class="quarto-xref">Equation&nbsp;9</a>, we see that the diffusion limited current is a function of (2n+1)/2 powers of <span class="math inline">\(\nu\)</span> where <span class="math inline">\(n \in \mathbb{N}\)</span>, the set of natural numbers. And the net diffusive current is then: : <span id="eq-idiffusion2"><span class="math display">\[
-i_D = \Lambda \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{j^n \sigma^{n+1/2}}{n!}
-\qquad(4)\]</span></span></p>
-<p>We can now extend the model by adding a diffusive correction from the next order term and thereby get a model that is quadratic in : <span id="eq-quadmodel2"><span class="math display">\[
-I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
-\qquad(5)\]</span></span></p>
-<p><span id="eq-quadmodel"><span class="math display">\[
-\frac{I(\nu, V)}{\nu^{1/2}} =  {\beta_1 \nu^{1/2}}+ \beta_2 + \beta_3 \nu + \epsilon
-\qquad(6)\]</span></span></p>
-<p>where <span class="math inline">\(\beta_i\)</span> are the regression parameters; <span class="math inline">\(I\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\nu\)</span> have their usual meanings and <span class="math inline">\(\epsilon\)</span> again is the noise term. Parameters <span class="math inline">\(\beta_2\)</span> and <span class="math inline">\(\beta_3\)</span> correspond to the diffusion limited Faradaic current but the first parameter, <span class="math inline">\(\beta_1\)</span> would encompass the contribution from the Double Layer (DL) as well as the Faradaic, though non-diffusion limited contribution from pseudocapacitive effects.</p>
-</div>
-</div>
-</div>
-<div id="option24Content" class="content">
-<p>Like a scout you have to show that you’ve come prepared and that your statements are backed by data if someone wants to cross check you.</p>
-<p>To do this always have a Supplementary section comprising information that is only to be shown if someone asks the relevant question.</p>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;">
-<p>Fitting for the complete set</p>
-</div>
-<div class="ddm-box">
-<p><img data-src="_figs/quad/FigS2.png"></p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;">
-<p>Box plots for the complete set</p>
-</div>
-<div class="ddm-box">
-<p><img data-src="_figs/quad/FigS3.png"></p>
-</div>
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2 scrollable">
-<h2></h2>
+<section id="is-it-possible-to-solve-many-body-schrodinger-equation" class="slide level2">
+<h2>Is it Possible to Solve Many Body Schrodinger Equation?</h2>
 <div class="navbar">
-<p><span class="nav-option" data-option="option21" onclick="showContent(this)">Philosophy</span> <span class="nav-option" data-option="option23" onclick="showContent(this)">Model</span> <span class="nav-option" data-option="option24" onclick="showContent(this)">Supplementary</span></p>
+<p><span class="nav-option" data-option="option21" onclick="showContent(this)">Challenges</span> <span class="nav-option" data-option="option22" onclick="showContent(this)">Simplifications</span></p>
 </div>
 <div id="option21Content" class="content">
 <div class="columns">
-<div class="column">
-<div class="smaller">
-<p>Attention must be paid to the underlying assumptions before applying the model.</p>
-<blockquote>
-<p>Battery models commonly make <span style="color:FireBrick">assumptions known to be false,</span> such as describing phase separating materials with Fickian diffusion.</p>
-–<a href="https://dspace.mit.edu/handle/1721.1/111406">RB Smith</a>
-</blockquote>
-</div>
-</div><div class="column">
-<p><img data-src="_figs/quad/LinearityMOF.png"></p>
+<div class="column" style="width:60%;">
+<ul>
+<li>28 electrons in a unit cell of Si</li>
+<li>Discretizing each dimension in 10 points gives <span class="math inline">\(10^3\)</span> coordinates in 3D</li>
+<li>For 28 electrons: <span class="math inline">\(10^{3\times28} = 10^{84}\)</span> calculations.</li>
+<li>HPC can perform <span class="math inline">\(10^{18}\)</span> calculations per sec</li>
+<li>Require <span class="math inline">\(10^{66}\)</span> sec to perform calculations
+<div style="color:FireBrick; text-align:center; margin-top:4em">
+<p><em>HUGE TIME!</em></p>
+</div></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="_figs/silicon.png" style="width:70.0%"></p>
 </div></div>
 </div>
-<div id="option23Content" class="content">
-<p>Say you have a mathematical model like the one below: <span id="eq-quadraticmodel1"><span class="math display">\[
-I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
-\qquad(7)\]</span></span></p>
-<p>But you don’t want to burden the audience with the complete derivation (which in some cases could be worth several pages)</p>
-<p><span id="eq-quadraticmodel2"><span class="math display">\[
-\frac{I(\nu, V)}{\nu^{1/2}} =  \beta_1 \nu^{1/2} + \beta_2 + \beta_3 \nu + \epsilon
-\qquad(8)\]</span></span></p>
-<p>But someone ends up asking a question. For that you can keep the derivation ready.</p>
-<div class="dd">
-<div class="dd-head" onclick="toggleBox(this)">
-<p>Derivation</p>
+<div id="option22Content" class="content scrollable">
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="ddm" style="font-size:0.63em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
+<p>Born-Oppenheimer Approximation</p>
 </div>
-<div class="dd-box" style="font-size:0.75em">
-<p>To rectify this situation we turn to the classic papers by <a href="https://pubs.acs.org/doi/pdf/10.1021/ac60191a030">(Reinmuth, 1962)</a>, and <a href="https://pubs.acs.org/doi/10.1021/ac60210a007">(Nicholson and Shain, 1964)</a> and we see that for a semi-infinite linear diffusion reaction of the form <span class="math inline">\(O + ne \rightleftharpoons R\)</span> with only O present initially, the diffusion limited current, <span class="math inline">\(i_D\)</span> , has the general form:</p>
-<p><span id="eq-idiffusion"><span class="math display">\[
-    i_D = \Lambda \sigma^{1/2} \chi(\sigma t)
-\qquad(9)\]</span></span></p>
-<p>where <span class="math inline">\(\Lambda\)</span> and <span class="math inline">\(\sigma\)</span> are:</p>
-<p><span class="math display">\[\begin{align}
-    \Lambda &amp;= nFAC_O^*(\pi D_O)^{1/2}\\
-    \sigma &amp;= \frac{nF\nu }{RT}
-\end{align}\]</span></p>
-<p>The normalized current <span class="math inline">\(\chi\)</span> can be given the series expansion:</p>
-<p><span class="math display">\[\begin{align}
-    \chi(\sigma t) &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}(E-E_0) \Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[- \frac{jnF}{RT}E + \frac{jnF}{RT}E_0 \Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - \nu t) + \frac{jnF}{RT}E_0\Biggl]}\\
-    &amp;= \sum_{j=1}^{\infty} c_j exp{\Biggl[-\frac{jnF}{RT}(E_i - E_0) \Biggl] exp [j\sigma t]}\\
-    &amp;= \sum_{j=1}^{\infty} d_j exp[j \sigma t]\\
-    &amp;= \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{(j\sigma)^n}{n!}
-    \label{eq-normcurrent}
-\end{align}\]</span></p>
-<p>Where the <span class="math inline">\(c_j\)</span> and <span class="math inline">\(d_j\)</span> are expansion coefficients.</p>
-<p>Therefore substituting the series expansion for the normalize current into <a href="#/eq-idiffusion" class="quarto-xref">Equation&nbsp;9</a>, we see that the diffusion limited current is a function of (2n+1)/2 powers of <span class="math inline">\(\nu\)</span> where <span class="math inline">\(n \in \mathbb{N}\)</span>, the set of natural numbers. And the net diffusive current is then: : <span id="eq-idiffusion2"><span class="math display">\[
-i_D = \Lambda \sum_{j=1}^{\infty} d_j \sum_{n=0}^{\infty} \frac{j^n \sigma^{n+1/2}}{n!}
-\qquad(10)\]</span></span></p>
-<p>We can now extend the model by adding a diffusive correction from the next order term and thereby get a model that is quadratic in : <span id="eq-quadmodel2"><span class="math display">\[
-I(\nu, V) =  \overbrace{\beta_1 \nu}^{Cap+Pseudo} + \overbrace{\beta_2\nu^{1/2} + \beta_3 \nu^{3/2}}^{Diffusive} + \epsilon
-\qquad(11)\]</span></span></p>
-<p><span id="eq-quadmodel"><span class="math display">\[
-\frac{I(\nu, V)}{\nu^{1/2}} =  {\beta_1 \nu^{1/2}}+ \beta_2 + \beta_3 \nu + \epsilon
-\qquad(12)\]</span></span></p>
-<p>where <span class="math inline">\(\beta_i\)</span> are the regression parameters; <span class="math inline">\(I\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\nu\)</span> have their usual meanings and <span class="math inline">\(\epsilon\)</span> again is the noise term. Parameters <span class="math inline">\(\beta_2\)</span> and <span class="math inline">\(\beta_3\)</span> correspond to the diffusion limited Faradaic current but the first parameter, <span class="math inline">\(\beta_1\)</span> would encompass the contribution from the Double Layer (DL) as well as the Faradaic, though non-diffusion limited contribution from pseudocapacitive effects.</p>
+<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
+<div style="color:FireBrick; text-align:center">
+<p><strong>Born-Oppenheimer Approximation</strong></p>
+<p><em>Simplify the problem by splitting of problem into two parts: Electronic and Nuclear</em></p>
+</div>
+<p><span class="math display">\[
+m_{nuclei} &gt;&gt; m_{electron}
+\]</span></p>
+<p><span id="eq-Hamiltonian"><span class="math display">\[
+\hat{H}_{B.O} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
+- 0 + \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}} + constant
+\qquad(3)\]</span></span></p>
+<div style="color:FireBrick; text-align:center">
+<p><em>Now, only electronic Hamiltonian remains</em></p>
 </div>
 </div>
 </div>
-<div id="option24Content" class="content">
-<p>Like a scout you have to show that you’ve come prepared and that your statements are backed by data if someone wants to cross check you.</p>
-<p>To do this always have a Supplementary section comprising information that is only to be shown if someone asks the relevant question.</p>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;">
-<p>Fitting for the complete set</p>
+</div><div class="column" style="width:45%;">
+<div class="ddm" style="font-size:0.63em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
+<p>From wavefunction to electron density</p>
 </div>
-<div class="ddm-box">
-<p><img data-src="_figs/quad/FigS2.png"></p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 3px solid Coral;">
-<p>Box plots for the complete set</p>
-</div>
-<div class="ddm-box">
-<p><img data-src="_figs/quad/FigS3.png"></p>
+<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
+<p><em>Probability desnity</em> <span id="eq-electrondensity"><span class="math display">\[
+|\psi_{electron (r_1 \dots, r_N)}|^2 = |\psi_{electron (r_1 \dots, r_N)}^* \psi_{electron (r_1 \dots, r_N)}|
+\qquad(4)\]</span></span></p>
+<p><em>Electron desnity</em> <span class="math display">\[
+n(\vec{r}) = 2 \Sigma_{i} \psi_{i}^* (\vec{r}) \psi_{i}(\vec{r})  
+\]</span></p>
+<div style="color:FireBrick; text-align:center">
+<p><em>Problem is reduced from 3N variables to 3 variables</em></p>
 </div>
 </div>
+</div>
+</div></div>
 </div>
 </section>
-<section id="by-pass-space-limitations" class="slide level2">
-<h2>By pass Space Limitations</h2>
+<section id="hohenberg-kohn-theorems-1964" class="slide level2">
+<h2>Hohenberg-Kohn Theorems (1964)</h2>
+<div style="color:FireBrick; text-align:center">
+<p><strong>First HK Theorem</strong></p>
+</div>
+<!-- The ground state energy $E$ from Schrodinger's equation is a unique functional of electron density $n(r)$.\\
+The ground state energy of a system is uniquely determined by the ground state electron density. -->
+<p>For any system of interacting particles in an external potential <span class="math inline">\(V_{ext}(\vec{r})\)</span>, the potential <span class="math inline">\(V_{ext}(\vec{r})\)</span> is determined uniquely by the ground state particle density <span class="math inline">\(n_0(r)\)</span>.</p>
+<p><span id="eq-HK1"><span class="math display">\[
+E_{ground} = E[n(r)]
+\qquad(5)\]</span></span></p>
+<div style="color:FireBrick; text-align:center">
+<p><strong>Second HK Theorem</strong></p>
+</div>
+<p>The density that minimizes the energy functional is the exact ground state density (<em>variational principle</em>)</p>
+<p><span id="eq-HK2"><span class="math display">\[
+E_{o} \leq E_{trial} = \int \psi_{trial}^* \hat{H} \psi_{trial}
+\qquad(6)\]</span></span></p>
+</section>
+<section id="energy-functional" class="slide level2 scrollable">
+<h2>Energy Functional</h2>
+<p><span id="eq-functional"><span class="math display">\[
+E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}[\rho]
+\qquad(7)\]</span></span></p>
+<p><span id="eq-functional"><span class="math display">\[
+E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}^{classical}[\rho] + E_{XC}[\rho]
+\qquad(8)\]</span></span></p>
+<div style="color:FireBrick; text-align:center">
+<p><em>The explicit form of <span class="math inline">\(T[\rho]\)</span> and <span class="math inline">\(E_{XC}\)</span> is the major challenge of DFT</em></p>
+</div>
+<p><span id="eq-functional"><span class="math display">\[
+E_{KS}[\rho] = \overbrace{T_s[\rho] + E_{Ne}[\rho] +  E_{ee}^{classical}[\rho]}^\textit{known functionals} + \overbrace{E_{ee}^{XC}[\rho]}^\textit{unknown functionals}
+\qquad(9)\]</span></span></p>
+<p><span class="math inline">\(E_{XC}\)</span> includes:</p>
+<ul>
+<li>Exchange and correlation energy</li>
+<li>Correction of Kinetic energy term <span class="math inline">\(\Delta T_{\rho}[\rho]\)</span></li>
+</ul>
+<!-- <div style="color:FireBrick; text-align:left">
+
+What we do not know is exchange and correlation functional $E_{XC}$ containing:
+
+</div>
+
+- Correction of kinetic energy
+- Exchange and correlation energy -->
+</section>
+<section id="kohn-sham-formalism" class="slide level2">
+<h2>Kohn-Sham Formalism</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>You can use panel tabs in a two column format.</p>
-<p>Now the text remains the same while you scroll through the images.</p>
-<p>This can help when there are multiple images to show and you don’t want your audience distracted.</p>
+<p><br>
+<br>
+<br>
+<br>
+</p>
+<div style="color:#004225; text-align:center">
+<p><em>Solving one particle many KS equations instead of many particle one equation</em></p>
+</div>
 </div><div class="column" style="width:50%;">
+<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="_figs/KS-method.png" class="quarto-figure quarto-figure-center" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Kohn Sham Formalism
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="materials-and-their-properties" class="title-slide slide level1 center">
+<h1>Materials and Their Properties</h1>
+
+</section>
+<section id="perovskites" class="slide level2 scrollable">
+<h2>Perovskites</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Colonnade</a></li><li><a href="#tabset-1-2">Arches</a></li><li><a href="#tabset-1-3">Questions</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Structure</a></li><li><a href="#tabset-1-2">Properties</a></li><li><a href="#tabset-1-3">Technical Background</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_figs/sample/front.png"></p>
-<figcaption>Transport mechanisms in MOFs. [Xie, Chemical Reviews (2020)]</figcaption>
-</figure>
+<ul>
+<li><p>Perovskite is <span style="color:Blue"> Calcium Titanate <span class="math inline">\((CaTiO_3)\)</span> </span></p>
+<ul>
+<li>Discovered in 1839 by Gustav Rose in Ural mountains and named after mineralogist Count Lev Perovski.</li>
+<li>The structure was first described by <span style="color:Green"> Victor Goldschmidt in 1926 </span></li>
+</ul></li>
+</ul>
+<div style="color:FireBrick; text-align:center">
+<p>Perovskites generally exist in the form <span class="math inline">\(ABX_3\)</span>.</p>
 </div>
 </div>
 <div id="tabset-1-2">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_figs/sample/arches.png"></p>
-<figcaption>Transport pathways. [Xie, Chemical Reviews (2020)]</figcaption>
-</figure>
+<ul>
+<li>Flexible structure</li>
+<li>Tunable bandgap</li>
+<li>High absorption coefficient</li>
+<li>High dielectric constant</li>
+<li>Low exciton binding energy</li>
+<li>Good thermoelectric properties</li>
+<li>Ferroelectric properties</li>
+</ul>
+<div style="color:FireBrick; text-align:center">
+<p>Undesirable phase transitions at room temperature affecting their stability</p>
 </div>
 </div>
 <div id="tabset-1-3">
-<p>Hide discussion questions here:</p>
 <ul>
-<li>What building materials?</li>
-<li>Form vs.&nbsp;Function?</li>
+<li>Crystal</li>
+<li>Periodicity - translational symmetry</li>
+<li>Bloch Theorem Eigenstates of periodic Hamiltonian can be written as: <span id="eq-Bloch’stheorem"><span class="math display">\[
+\psi_{n,k}(r) = e^{\iota k.r} u_{n,k}(r)
+\qquad(10)\]</span></span></li>
 </ul>
+<div style="color:FireBrick; text-align:center">
+<p>Delocalized orbitals- not appropriate for visualziation of chemcial bonds</p>
+</div>
+<div style="color:FireBrick; text-align:center">
+<p>Scales cubically with system’s size due to the dependance of k values</p>
 </div>
 </div>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="position: relative; width: 15em; height: 12em;">
+<p><img data-src="_figs/perovskite.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 75%;"> <img data-src="_figs/refs.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <img data-src="_figs/Bloch.jpg" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 95%;"></p>
+</div>
+<!-- ![](_figs/perovskite.png){width=120%}
+
+:::{.fragment .fade-in}
+![](_figs/Bloch.jpg){width=120%}
+::: -->
 </div></div>
-</section>
-<section id="questions-1" class="slide level2">
-<h2>Questions</h2>
-<div class="columns">
-<div class="column">
-<!--  -->
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="text-align:left">
-<p><strong>Topic A</strong></p>
-</div>
-<div class="ddm-box">
-<ul>
-<li>Bullet 1</li>
-<li>Bullet 2</li>
-</ul>
-</div>
-</div>
-<!--  -->
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="text-align:left">
-<p><strong>Topic B</strong></p>
-</div>
-<div class="ddm-box">
-<ul>
-<li>Question
-<ul>
-<li>Answers</li>
-<li>Answers</li>
-</ul></li>
-</ul>
-</div>
-</div>
-<!--  -->
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="text-align:left">
-<p><strong>Topic C</strong></p>
-</div>
-<div class="ddm-box">
-<p>Answers</p>
-</div>
-</div>
-</div><div class="column">
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="text-align:left">
-<p><strong>Topic D</strong></p>
-</div>
-<div class="ddm-box">
-<p>Answers</p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="text-align:left">
-<p><strong>Topics</strong></p>
-</div>
-<div class="ddm-box">
-<p>Answers</p>
-</div>
-</div>
-</div></div>
-</section>
-<section id="other-ideas" class="title-slide slide level1 center">
-<h1>Other Ideas</h1>
+</section></section>
+<section>
+<section id="problem-statement" class="title-slide slide level1 center">
+<h1>Problem Statement</h1>
 
 </section>
-<section id="section-9" class="slide level2 scrollable">
-<h2></h2>
+<section id="problem-statement-1" class="slide level2">
+<h2>Problem Statement</h2>
+<div style="color:FireBrick; text-align:center">
+<p><strong>Technical Challenge: Computational Cost</strong></p>
+</div>
+<ul>
+<li>DFT is computationally expensive for large, disordered systems</li>
+<li>Modeling defects accurately requires efficient methodologies</li>
+</ul>
+<div style="color:FireBrick; text-align:center">
+<p><strong>Material Challenge: Stability Issues</strong></p>
+</div>
+<ul>
+<li>Intrinsic instability</li>
+<li>Bandgap variations due to phase transitions</li>
+</ul>
+</section></section>
+<section>
+<section id="proposed-approach" class="title-slide slide level1 center">
+<h1>Proposed Approach</h1>
+
+</section>
+<section id="wannierization-and-disordered-perovskites" class="slide level2 scrollable">
+<h2>Wannierization and Disordered Perovskites</h2>
+<div style="color:FireBrick; text-align:center">
+<p><em>Implement computationally efficient Wannierization on anion exchnaged and point defected Lead Halide Perovskites</em></p>
+</div>
 <div class="navbar">
-<p><span class="nav-option" data-option="option31" onclick="showContent(this)">Workflow</span> <span class="nav-option" data-option="option33" onclick="showContent(this)">Interactivity</span> <span class="nav-option" data-option="option36" onclick="showContent(this)">Analysis</span> <span class="nav-option" data-option="option37" onclick="showContent(this)">Pairings</span></p>
+<p><span class="nav-option" data-option="option31" onclick="showContent(this)">Wannierization and Tight Binding</span> <span class="nav-option" data-option="option32" onclick="showContent(this)">Anion Exchange and Point Defects</span></p>
 </div>
-<div id="option31Content" class="content">
-<div class="columns">
-<div class="column">
-<ul>
-<li>You can present data like this.</li>
-<li>By having the tab structure in the header, your audience immediately knows where you are.</li>
-<li>Without it you risk shortsightedness on the audience’s part.</li>
-</ul>
-</div><div class="column">
-<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/workflow2.png" width="650">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The complete workflow
-</figcaption>
-</figure>
-</div>
-</div></div>
-</div>
-<div id="option33Content" class="content">
-<div class="layout-sidebar layout-sidebar-left">
-<div class="cell panel-sidebar">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href=""></a>viewof talentWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"talent weight"</span> })</span>
-<span id="cb1-2"><a href=""></a>viewof looksWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"looks weight"</span> })</span>
-<span id="cb1-3"><a href=""></a>viewof minimum <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"min fame"</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div>
-<div class="cell panel-fill">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a><span class="im">import</span> { plotActors } <span class="im">from</span> <span class="st">'./_data/actors.js'</span><span class="op">;</span></span>
-<span id="cb2-2"><a href=""></a><span class="fu">plotActors</span>(actors<span class="op">,</span> talentWeight<span class="op">,</span> looksWeight<span class="op">,</span> minimum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-2" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="option36Content" class="content">
+<div id="option31Content" class="content scrollable">
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Featurizers</a></li><li><a href="#tabset-2-2">Model</a></li><li><a href="#tabset-2-3">ROC</a></li><li><a href="#tabset-2-4">Confusion Matrix</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Wannierization</a></li><li><a href="#tabset-2-2">Tight Binding</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>Crystal NN</li>
-<li>Morgan fingerprint</li>
-<li>Bond orientational parameter</li>
-<li>Intermetallic distance</li>
-<li>One Hot Encoding</li>
+<li>Unitary transformation of Bloc h functions</li>
+<li>Localized in space</li>
+<li>Translation images of each other</li>
+<li>Forms orthonormal set <span class="math display">\[w_{n,k}(r) = \frac{1}{\sqrt N} \sum_N e^{-ik.R} \psi_k(r)\]</span></li>
 </ul>
+<div style="color:FireBrick; text-align:center">
+<p>Scales linearly with system’s size</p>
+</div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="_figs/WFs.png" style="width:100.0%"></p>
+</div></div>
 </div>
 <div id="tabset-2-2">
-<div id="fig-bgbin" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-bgbin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/ML.png" width="800">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bgbin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Density plot between bandgaps and conductivity
-</figcaption>
-</figure>
-</div>
-</div>
-<div id="tabset-2-3">
-<div id="fig-porosity" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-porosity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/fig_ROC.png" width="600">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-porosity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Receiver operator characteristics
-</figcaption>
-</figure>
-</div>
-</div>
-<div id="tabset-2-4">
-<div id="fig-density" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/fig_confusion.png" width="600">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Confusion matrix
-</figcaption>
-</figure>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li>Model to analyze energy bands in a crystal</li>
+<li>Complete wavefunction can be written as the sum of wannier functions</li>
+<li>Corresponds to LCAO method</li>
+<li>Electron under the influence of other atoms are treat as perturbation</li>
+</ul>
+<p><span class="math display">\[\hat{H} = \hat{H_m} + V_{\phi_{1}} + V_{\phi_{1}}\]</span></p>
+<p>Energy eigen value is computed as the expectation value:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+\langle \phi_1|\hat{H}|\phi_1 \rangle   &amp;    \langle \phi_1|\hat{H}|\phi_2 \rangle\\
+\langle \phi_2|\hat{H}|\phi_1 \rangle   &amp;    \langle \phi_2|\hat{H}|\phi_2 \rangle
+\end{bmatrix}
+=
+\begin{bmatrix}
+E_{11}   &amp;   t_{12}\\
+t_{21}   &amp;    E_{22}
+\end{bmatrix}
+\]</span></p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="_figs/TB.png" style="width:100.0%"></p>
+</div></div>
 </div>
 </div>
 </div>
 </div>
+<div id="option32Content" class="content scrollable">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="ddm" style="font-size:0.63em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B">
+<p>Anion Exchange</p>
 </div>
-<div id="option37Content" class="content">
-<p>Putting a large table on a slide can be difficult.</p>
-<p>Other than removing columns altogether, you can do two things to make your tables readable:</p>
-<ol type="1">
-<li>Enable scrolling</li>
-<li>Zoom in. To do that hold down Ctrl key (cmd on Mac) and click on the segment you want to zoom. Repeating the procedure will zoom out.</li>
-</ol>
-<p><span style="font-size: 65%;">Table 2: Mean log conductivity for common metals and linkers pairings with number of samples indicated inside parentheses.</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_figs/TableMetalligandpairings.png" class="quarto-figure quarto-figure-center" width="1400"></p>
-</figure>
-</div>
-<div class="callout callout-caution callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Caution</strong></p>
-</div>
-<div class="callout-content">
-<p>There are no absolute answers here. Metal X is not better than Metal Y.</p>
-<p>What we have before us are trends.</p>
-<p>Engineering the right material for a problem is about deciding what tradeoffs you want.</p>
+<div class="ddm-box" style="font-family:GS_L; border-color:transparent">
+<p><span class="math display">\[ Br_3 \to Br_2I \to BrI_2 \to I_3\]</span></p>
 </div>
 </div>
+<div class="ddm" style="font-size:0.63em; font-family:Ubuntu Mono; line-height:0; margin-bottom: 0px; margin-top: 0px">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid LightGray;font-family:GS_C-B">
+<p>Point Defects</p>
+</div>
+<div class="ddm-box" style="font-family:GS_L;border-color:transparent; font-size:1.2em">
+<div>
+<p>Kroger-Vink notation</p>
+</div>
+<ul>
+<li><span class="math display">\[V_{Pb}^{\prime \prime}\]</span></li>
+<li><span class="math display">\[M_{Pb}^{(q-2).}\]</span></li>
+<li><span class="math display">\[M_{Pb}^{(q-2)\prime}\]</span></li>
+</ul>
 </div>
 </div>
-</section>
-
-<section id="summary" class="title-slide slide level1 scrollable center">
-<h1>Summary</h1>
-<p>Try summarizing different phases of your project</p>
+</div><div class="column" style="width:60%;">
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">I</a></li><li><a href="#tabset-3-2">II</a></li><li><a href="#tabset-3-3">III</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Anion Exchange</a></li><li><a href="#tabset-3-2">Point Defects</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<p>In phase I we:</p>
-<ul>
-<li>Accomplishment A</li>
-<li>Accomplishment B</li>
-<li>Accomplishment C</li>
-</ul>
+<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="_figs/anionexchange.png" class="quarto-figure quarto-figure-center" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Anion Ecxchange
+</figcaption>
+</figure>
+</div>
 </div>
 <div id="tabset-3-2">
-<p>Summary for phase II</p>
+<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="_figs/Pbvac.png" class="quarto-figure quarto-figure-center" style="width:80.0%">
 </div>
-<div id="tabset-3-3">
-<p>Summary for phase III</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Point Defect
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
-</section>
+</div>
+</div></div>
+</div>
+<!-- ## ABC
+{{< include subslides/_proposedsol1.qmd >}} -->
+</section></section>
+<section>
+<section id="methodology" class="title-slide slide level1 center">
+<h1>Methodology</h1>
 
-<section id="related-publications" class="title-slide slide level1 center">
-<h1>Related Publications</h1>
-<ul>
-<li>Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol.&nbsp;81, no. 3, 1973, pp.&nbsp;637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar.&nbsp;2024.</li>
-<li>Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol.&nbsp;81, no. 3, 1973, pp.&nbsp;637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar.&nbsp;2024.</li>
-<li>Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol.&nbsp;81, no. 3, 1973, pp.&nbsp;637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar.&nbsp;2024.</li>
-</ul>
 </section>
-<section id="section-10" class="slide level2 center">
+<section id="strategy-and-computational-details" class="slide level2 scrollable">
+<h2>Strategy and Computational Details</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Software packages:</p>
+<ul>
+<li><p><span style="color:#2B547E; text-align:center"><em>Vesta</em> </span> for structure generation</p></li>
+<li><p><span style="color:#810541; text-align:center"><em>Quantum Espresso</em> </span> for DFT calcualtions</p></li>
+<li><p><span style="color:#FF7722; text-align:center"><em>Wannier90</em> </span> for Wannierization</p></li>
+<li><p><span style="color:#DF73D4; text-align:center"><em>PythTB</em> </span> for tight binding calcualtions</p></li>
+<li><p><span style="color:#E75480; text-align:center"><em>Post W90 modules</em> </span> for transport properties calculations</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="_figs/workflow-titledefense.png" style="width:80.0%"></p>
+</div></div>
+</section></section>
+<section>
+<section id="references" class="title-slide slide level1 center">
+<h1>References</h1>
+<p>Perovskite slide refs: https://pubs.rsc.org/en/content/articlelanding/2024/ra/d4ra01640h?utm_source=chatgpt.com</p>
+<p>https://www.science.org/doi/10.1126/sciadv.abj5881#:~:text=Here%2C%20we%20report%20on%20the,that%20promotes%20the%20ion%20displacement.</p>
+<p>https://nanoconvergencejournal.springeropen.com/articles/10.1186/s40580-024-00440-7?utm_source=chatgpt.com</p>
+<p>https://pubs.rsc.org/en/content/articlelanding/2015/ta/c4ta05226a?utm_source=chatgpt.com</p>
+</section>
+<section id="section-1" class="slide level2 center">
 <h2></h2>
 <pre><p style="margin-left: 5em;font-family: GS_L; font-variant: small-caps; font-size:1.5em"><b>The End</b></p></pre><b>
 </b>
 <p></p>
 
+<!-- THE END -->
 
 
-</section>
-
-</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="_figs/treelogo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -1534,93 +1170,6 @@ Figure&nbsp;4: Confusion matrix
         ]
       });
     </script>
-    <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB0YWxlbnRXZWlnaHQgPSBJbnB1dHMucmFuZ2UoWy0yLCAyXSwgeyB2YWx1ZTogMC43LCBzdGVwOiAwLjAxLCBsYWJlbDogXCJ0YWxlbnQgd2VpZ2h0XCIgfSlcbnZpZXdvZiBsb29rc1dlaWdodCA9IElucHV0cy5yYW5nZShbLTIsIDJdLCB7IHZhbHVlOiAwLjcsIHN0ZXA6IDAuMDEsIGxhYmVsOiBcImxvb2tzIHdlaWdodFwiIH0pXG52aWV3b2YgbWluaW11bSA9IElucHV0cy5yYW5nZShbLTIsIDJdLCB7IHZhbHVlOiAxLCBzdGVwOiAwLjAxLCBsYWJlbDogXCJtaW4gZmFtZVwiIH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQgeyBwbG90QWN0b3JzIH0gZnJvbSAnLi9fZGF0YS9hY3RvcnMuanMnO1xucGxvdEFjdG9ycyhhY3RvcnMsIHRhbGVudFdlaWdodCwgbG9va3NXZWlnaHQsIG1pbmltdW0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RhbGVudFdlaWdodCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdsb29rc1dlaWdodCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdtaW5pbXVtJykifV19
-    </script>
-    <script type="module">
-    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-    window._ojs.paths.runtimeToDoc = "../../..";
-    window._ojs.paths.runtimeToRoot = "../../..";
-    window._ojs.paths.docToRoot = "";
-    window._ojs.selfContained = false;
-    window._ojs.runtime.interpretFromScriptTags();
-    </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

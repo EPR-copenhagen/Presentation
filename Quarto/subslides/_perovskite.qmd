@@ -1,0 +1,83 @@
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.panel-tabset}
+
+#### Structure
+
+- Perovskite is <span style= "color:Blue"> Calcium Titanate $(CaTiO_3)$ </span>
+
+    - Discovered in 1839 by Gustav Rose in Ural mountains and named after mineralogist Count Lev Perovski.
+    - The structure was first described by  <span style="color:Green"> Victor Goldschmidt in 1926 </span>
+
+
+<div style="color:FireBrick; text-align:center">
+
+Perovskites generally exist in the form $ABX_3$.
+
+</div>
+
+#### Properties
+- Flexible structure
+- Tunable bandgap
+- High absorption coefficient
+- High dielectric constant
+- Low exciton binding energy
+- Good thermoelectric properties
+- Ferroelectric properties
+
+<div style="color:FireBrick; text-align:center">
+
+Undesirable phase transitions at room temperature affecting their stability
+
+</div>
+
+
+#### Technical Background
+
+- Crystal
+- Periodicity - translational symmetry
+- Bloch Theorem
+Eigenstates of periodic Hamiltonian can be written as:
+$$
+\psi_{n,k}(r) = e^{\iota k.r} u_{n,k}(r)
+$${#eq-Bloch'stheorem}
+
+<div style="color:FireBrick; text-align:center">
+
+Delocalized orbitals- not appropriate for visualziation of chemcial bonds
+
+</div>
+
+<div style="color:FireBrick; text-align:center">
+
+Scales cubically with system's size due to the dependance of k values
+
+</div>
+
+:::
+
+:::
+
+::: {.column width="50%"} 
+
+::: {style="position: relative; width: 15em; height: 12em;"}
+![](_figs/perovskite.png){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 75%;"}
+![](_figs/refs.png){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"}
+![](_figs/Bloch.jpg){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 95%;"}
+:::
+
+<!-- ![](_figs/perovskite.png){width=120%}
+
+:::{.fragment .fade-in}
+![](_figs/Bloch.jpg){width=120%}
+::: -->
+
+:::
+
+
+
+:::

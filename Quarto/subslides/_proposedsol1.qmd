@@ -1,0 +1,90 @@
+
+
+<div style="color:FireBrick; text-align:center">
+
+*Implement computationally less intensive Wannierizeatin on Anion Exchnaged Lead Halide Perovskites*
+</div>
+
+:::::{.panel-tabset}
+
+#### Anion Exchange in Halide Perovskites
+
+::::{.columns}
+
+:::{.column width=30%}
+
+- $$CsPbBr_3$$
+- $$CsPbBr_2I$$
+- $$CsPbBrI_2$$
+- $$CsPbI_3$$
+
+:::
+
+:::{.column width=70%}
+
+![](_figs/anionexchange.png){width=70%}
+
+:::
+
+::::
+
+#### Introducing Defects
+
+
+#### Effect of Anion Exchange
+
+::::{.columns}
+
+:::{.column width=45%}
+
+<div style="color:FireBrick; text-align:center; position: absolute; top: 12em">
+
+$$ Br_3 \to Br_2I \to BrI_2 \to I_3$$
+
+</div>
+
+
+:::
+
+:::{.column width=55%}
+
+![](_figs/DAG1.png){width=80%}
+
+:::
+
+::::
+
+
+#### Wannierized Tight Binding
+
+:::{.columns}
+
+:::{.column width=40%}
+
+
+- Real space representation of solids
+- Unitary transformation of Bloch functions
+- Trade off localization in energy for localization in space
+- equation??
+
+<div style="color:FireBrick; text-align:center">
+
+Scales linearly with system's size
+
+</div>
+
+:::
+
+
+:::{.column width=60%}
+
+![](_figs/WFs.png){width=100%}
+
+:::
+
+:::
+
+:::::
+
+
+

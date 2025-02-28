@@ -1,0 +1,30 @@
+<div style="color:FireBrick; text-align:center">
+
+
+**First HK Theorem**
+
+</div>
+
+<!-- The ground state energy $E$ from Schrodinger's equation is a unique functional of electron density $n(r)$.\\
+The ground state energy of a system is uniquely determined by the ground state electron density. -->
+
+For any system of interacting particles in an external potential $V_{ext}(\vec{r})$, the potential $V_{ext}(\vec{r})$ is determined uniquely by the ground state particle density $n_0(r)$.
+
+$$
+E_{ground} = E[n(r)]
+$${#eq-HK1}
+
+
+<div style="color:FireBrick; text-align:center">
+
+
+**Second HK Theorem**
+
+</div>
+
+The density that minimizes the energy functional is the exact ground state density (*variational principle*)
+
+$$
+E_{o} \leq E_{trial} = \int \psi_{trial}^* \hat{H} \psi_{trial}
+$${#eq-HK2}
+

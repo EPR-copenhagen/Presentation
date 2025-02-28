@@ -1,0 +1,21 @@
+<div style="color:FireBrick; text-align:center">
+
+**Technical Challenge: Computational Cost**
+
+</div>
+
+- DFT is computationally expensive for large, disordered systems
+- Modeling defects accurately requires efficient methodologies
+
+
+<div style="color:FireBrick; text-align:center">
+
+**Material Challenge: Stability Issues**
+
+</div>
+
+- Intrinsic instability
+- Bandgap variations due to phase transitions
+
+
+

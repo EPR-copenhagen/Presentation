@@ -1,0 +1,122 @@
+:::{.navbar}
+
+[Challenges]{.nav-option data-option="option21" onclick="showContent(this)"}
+[Simplifications]{.nav-option data-option="option22" onclick="showContent(this)"}
+
+:::
+
+
+:::{#option21Content .content}
+
+:::{.columns}
+:::{.column width=60%}
+
+- 28 electrons in a unit cell of Si
+- Discretizing each dimension in 10 points gives $10^3$ coordinates in 3D
+- For 28 electrons: $10^{3\times28} = 10^{84}$ calculations.
+- HPC can perform $10^{18}$ calculations per sec
+- Require $10^{66}$ sec to perform calculations
+<div style="color:FireBrick; text-align:center; margin-top:4em">
+*HUGE TIME!*
+</div>
+
+:::
+
+:::{.column width=40%}
+
+![](_figs/silicon.png){width=70%}
+
+:::
+:::
+
+:::
+
+:::{#option22Content .content .scrollable}
+
+
+::::{.columns}
+
+:::{.column width=55%} 
+
+:::: {.ddm style="font-size:0.63em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B"}
+
+Born-Oppenheimer Approximation
+
+:::
+:::{.ddm-box style="font-family:GS_L;border-color:transparent"}
+
+<div style="color:FireBrick; text-align:center">
+
+**Born-Oppenheimer Approximation**
+
+*Simplify the problem by splitting of problem into two parts: Electronic and Nuclear*
+
+</div>
+
+$$
+m_{nuclei} >> m_{electron}
+$$ 
+
+$$
+\hat{H}_{B.O} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
+- 0 + \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + constant
+$${#eq-Hamiltonian}
+
+
+
+<div style="color:FireBrick; text-align:center">
+
+
+*Now, only electronic Hamiltonian remains*
+
+</div>
+
+
+:::
+
+::::
+
+
+
+:::
+
+:::{.column width=45%} 
+
+:::: {.ddm style="font-size:0.63em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B"}
+
+From wavefunction to electron density
+
+:::
+:::{.ddm-box style="font-family:GS_L;border-color:transparent"}
+
+*Probability desnity*
+$$
+|\psi_{electron (r_1 \dots, r_N)}|^2 = |\psi_{electron (r_1 \dots, r_N)}^* \psi_{electron (r_1 \dots, r_N)}|
+$${#eq-electrondensity}
+
+*Electron desnity*
+$$
+n(\vec{r}) = 2 \Sigma_{i} \psi_{i}^* (\vec{r}) \psi_{i}(\vec{r})  
+$$
+
+
+
+<div style="color:FireBrick; text-align:center">
+
+
+*Problem is reduced from 3N variables to 3 variables*
+
+</div>
+
+
+:::
+
+::::
+
+:::
+
+::::
+
+:::

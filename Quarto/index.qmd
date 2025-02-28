@@ -4,7 +4,7 @@ format:
     revealjs:
         math: true
         title-slide-attributes:
-            data-background-image: _figs/treelogo.png
+            # data-background-image: _figs/treelogo.png
             data-background-size: 50px
         mermaid:
             theme: default
@@ -12,7 +12,7 @@ format:
         height: 900
         margin: 0.1
         theme: [default, css/style.scss]
-        css: [css/style.css, css/buttons.css, css/tabs.css, css/callouts.css, css/nav.css, css/revealhacks.css, css/mystylecss.css, css/timeline.css]
+        css: [css/style.css, css/buttons.css, css/tabs.css, css/callouts.css, css/nav.css, css/revealhacks.css, css/mystylecss.css, css/timeline.css, css/flip.css]
         subtitle: ""
         author: ""
         toc: FALSE
@@ -23,44 +23,17 @@ format:
         auto-animate-duration: 1.5   
         transition: convex
         background-transition: fade
-        logo: _figs/treelogo.png
+        # logo: _figs/treelogo.png
         ligthbox: auto
 
         engine: jupyter            
 
 include-in-header:
-    file: scripts/scripts.js
+    - file: scripts/scripts.js
+    - file: scripts/timeline.js
 
 editor: source
 ---
-
-## {.center}
-
-
-#### Title goes here 
-
-::::{.columns}
-:::{.column}
-
-`r Sys.Date()`
-
-</br> 
-
-Presenter: Misbah Shaheen
-Reg No.: ES 2302
-Supervisor: Dr. Sheharyar Pervez
-
-
-:::
-:::{.column}
- 
- 
-
-:::
-::::
-
-
-
 
 
 
@@ -68,72 +41,91 @@ Supervisor: Dr. Sheharyar Pervez
 
 <!-- ![](_figs/treelogo.png){width="1%"} -->
 
+
+
 ::: columns
 ::: {.column .right width="65%"}
-[**Title: something something ab initio**]{style="color:teal"}
+[**DFT Leveraged Tight Binding Insights Into Disordered Perovskites**]{style="color:teal; font-size: 1.3em"}
 
 [PhD. Title Defense]{style="color:gray"}
+
+[*Faculty of Engineering Sciences*]{style="color:gray"}
+
+[*Ghulam Ishaq Khan Institute of Engineering Sciences and Technology*]{style="color:gray"}
+
 :::
 
-::: {.column .left width="35%"}
-**Misbah Shaheen** 
+::: {.column width="35%"}
 
-(GES2302)
+<p style="margin-left: 50px;">**Misbah Shaheen** </p>
 
+<p style="margin-left: 50px;">ES2302</p>
+
+<p style="margin-left: 50px;">Supervisor: Dr. Sheharyar Pervez</p>
 
 :::
 :::
 
 <!-- <div class="vl"></div> -->
 
-## Outline
 
-* Context (Tools)
-    + Basic introduction to many body problem
-    + History: LCAO, Hartree-Fock methods lead to DFT
-    + Tight-binding approaches. (Relevance to 2D materials)
-    + Wannierization
-* Context (Physics)
-    + Tight binding (Hoppings)
-    + Bloch Theorem (Crystal vs. Molecule)
-    + Transport properties
-* Context (Materials)
-    + Perovskites. 
-    + Structure and properties
-    + Stability and bandgap issues
-    + Thermoelectric effects
-    + Band structure
-* Problem statement
-    + Stability
-    + Bandgap tuning
-    + Figure of Merit
-    + Tight-binding insights 
-    + Exciton bindings and Electron-Phonon interactions
-* Proposed approach
-    + DFT
-    + Wannierization
-    + Anion exchange
-    + Doping
-* Requirements
-    + Hard disk for data
-    + HPC/GPU   
+# Introduction to Density Functional Theory 
+
+<!-- ## Brief History of Computational Methods
+{{< include subslides/_DFThistory.qmd >}} -->
+
+## Background {.scrollable}
+
+{{< include subslides/_DFTbackground.qmd >}}
+
+## Is it Possible to Solve Many Body Schrodinger Equation?
+{{< include subslides/_challenges.qmd >}}
+
+## Hohenberg-Kohn Theorems (1964)
+{{< include subslides/_HK_theorem.qmd >}}
+
+## Energy Functional {.scrollable}
+{{< include subslides/_KSmethod.qmd >}}
+
+## Kohn-Sham Formalism
+{{< include subslides/_KSformalism.qmd >}}
 
 
 
+# Materials and Their Properties
+
+## Perovskites{.scrollable}
+{{< include subslides/_perovskite.qmd >}}
 
 
-<!-- ## Many Body Problem
-{{< include subslides/_manybodyproblem.qmd >}}
- -->
-
-<!-- ## Many Body Problem {.scrollable}
-{{< include subslides/_complexity.qmd >}} -->
-
-<!-- ## Problem Statement
- -->
+# Problem Statement 
+## Problem Statement
+{{< include subslides/_problemstatement.qmd >}}
 
 
-<!-- ## Methodology -->
+# Proposed Approach
+## Wannierization and Disordered Perovskites{.scrollable}
+{{< include subslides/_proposedsol0.qmd >}}
+
+<!-- ## ABC
+{{< include subslides/_proposedsol1.qmd >}} -->
+
+
+# Methodology
+## Strategy and Computational Details {.scrollable}
+{{< include subslides/_workflow.qmd >}}
+
+
+# References
+
+Perovskite slide refs:
+https://pubs.rsc.org/en/content/articlelanding/2024/ra/d4ra01640h?utm_source=chatgpt.com
+
+https://www.science.org/doi/10.1126/sciadv.abj5881#:~:text=Here%2C%20we%20report%20on%20the,that%20promotes%20the%20ion%20displacement.
+
+https://nanoconvergencejournal.springeropen.com/articles/10.1186/s40580-024-00440-7?utm_source=chatgpt.com
+
+https://pubs.rsc.org/en/content/articlelanding/2015/ta/c4ta05226a?utm_source=chatgpt.com
 
 
 ## {.center}
@@ -144,116 +136,4 @@ Supervisor: Dr. Sheharyar Pervez
 <!-- THE END -->
 
 
-# Template (Remove subsequent after completion)
 
-##
-The next few slides are for a presentation 
-
-
-## Navigating a forest (an analogy)
-{{< include subslides/_forestanalogy.qmd >}}
-
-
-## Medium is Message
-
-Arrange information side by side to make elegant comparisons. 
-
-::::{.columns}
-::: {.column}
-
-
-#### Approach A: Powerpoint
-
-Powerpoint's presentation structures can be rigid and uninteractive. 
-
-Presentations usually only go in the direction the presenter arranged it. 
-
-How many times have you found yourself jumping around slides in response to a question from the audience?
-
-:::
-::: {.column }
-#### Approach B: HTML 
-
-HTML presentations can make presentations more dynamic.
-
-:::
-::::
-
-Quotations create context and continuity:
-
-<blockquote>
-
-Powerpoint presentations too often resemble a schoolplay - very loud, very slow, and very simple.<sup>&#128481;</sup>
-
--- Edward Tufte
-
-* Emojis help audience make quick evaluations and release tension
-</blockquote>
-
-
-
-
-# Density Functional Theory 
-
-## Bried History of Computational Methods
-{{< include subslides/_DFThistory.qmd >}}
-
-## DFT Background {.scrollable}
-
-{{< include subslides/_DFTbackground.qmd >}}
-
-
-## {.scrollable}
-{{< include subslides/_solution.qmd >}}
-
-
-## By pass Space Limitations
-{{< include subslides/_spacelimit.qmd >}}
-
-## Questions
-{{< include subslides/_questions.qmd >}}
-
-
-# Other Ideas
-
-
-
-## {.scrollable}
-{{< include subslides/_moreideas.qmd >}}
-
-
-# Summary {.scrollable}
-Try summarizing different phases of your project 
-
-:::{.panel-tabset}
-## I
-
-In phase I we: 
-
-- Accomplishment A
-- Accomplishment B
-- Accomplishment C
-
-## II
-
-Summary for phase II
-
-## III
-
-Summary for phase III
-
-:::
-
-
-
-
-
-
-# Related Publications 
-
-- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
-- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
-- Black, Fischer, and Myron Scholes. “The Pricing of Options and Corporate Liabilities.” Journal of Political Economy, vol. 81, no. 3, 1973, pp. 637–54. JSTOR, http://www.jstor.org/stable/1831029. Accessed 10 Mar. 2024.
-
-## {.center}
-<pre><p style="margin-left: 5em;font-family: GS_L; font-variant: small-caps; font-size:1.5em"><b>The End</pre></b></p></pre>

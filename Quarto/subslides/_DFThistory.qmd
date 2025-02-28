@@ -1,43 +1,131 @@
-:::: {.timeline}
-
-
-
-:::{.dd-head onclick="toggleBox(this)" }
-
-### 2008
-
-:::
-:::{.dd-box style="font-size:0.75em"}
-- fdvdfvf
-vdfvdfvd
-vdfvdfv
-vdfvdfvdbve
-vdfvefvdfv
-vdfvdvdv
-vdfvdvdv
-vdfvdv
-
+::: {.center-line}
 :::
 
 
-### 2021
+<!-- :::{.fragment .fade-in .vertical-line style="top:8em; left: 4em; height:10%"}
+::: -->
 
 
-- Event 1: Description of event.
-- dvdfbvdbfv
+<!-- Dropdown -->
+::::{.ddm}
 
-### 2020
-- Event 2: Description of event.
-
-### 2019
-- Event 3: Description of event.
-
-:::{.tab}
-2000
-
-:::{.tab-content}
-
-fbdbxfgb
-:::
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute;top:9em; left:2em; width:2em; height:1.75em; border-bottom: transparent"}
+1927
 
 :::
+
+:::{.ddm-box-2border .show-up-arrow style="position:absolute; top:14em; left:2em"}
+
+Thomas-Fermi\
+Model
+
+
+:::
+::::
+
+
+
+::::{.ddm}
+
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute; top:9em; left:6em; width:2em; height:1.75em; border-bottom: transparent"}
+1959
+
+:::
+
+
+:::{.ddm-box-2border .show-arrow style="position:absolute;top:6em; left:2.5em"}
+
+Pseudopotentials
+
+:::
+::::
+
+<!-- Dropup-although not exactly -->
+::::{.ddm}
+
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute; top:9em; left:10em; width:2em; height:1.75em; border-bottom: transparent"}
+1964
+
+:::
+
+
+:::{.ddm-box-2border .show-up-arrow style="position:absolute;top:13.5em; left:10.5em"}
+
+ Hohenberg-Kohn\
+ Theorems
+
+:::
+
+
+<!-- :::{.arrow-down style="position:absolute;top:12em; left:7em"}
+::: -->
+
+::::
+
+
+
+<!-- Dropdown -->
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute;top:9em; left:14em; width:2em; height:1.75em; border-bottom: transparent"}
+1965
+
+:::
+:::{.ddm-box-2border .show-arrow style="position:absolute;top:5.5em; left:13em"}
+Kohn-Sham\
+Scheme
+:::
+::::
+
+<!-- Dropup -->
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute; top:9em; left:18em; width:2em; height:1.75em; border-bottom: transparent"}
+1972
+
+:::
+:::{.ddm-box-2border .show-up-arrow style="position:absolute;top:14em; left:20.5em"}
+Relativistic Effects
+:::
+::::
+
+
+
+<!-- Dropdown -->
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute;top:9em; left:22em; width:2em; height:1.75em; border-bottom: transparent"}
+1980s
+
+:::
+:::{.ddm-box-2border .show-arrow style="position:absolute;top:4em; left:23.5em"}
+- LDA
+- TDDFT
+- DFPT
+
+:::
+::::
+
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute;top:9em; left:26em; width:2em; height:1.75em; border-bottom: transparent"}
+1990s
+
+:::
+:::{.ddm-box-2border .show-up-arrow style="position:absolute;top:14.5em; left:29.5em"}
+- MLWFs
+- Hubbard Correction
+- XC functionals
+- GGA
+:::
+::::
+
+::::{.ddm}
+:::{.ddm-head onclick="toggleBox(this)" style="position:absolute;top:9em; left:30em; width:em; height:1.75em; border-bottom: transparent"}
+Post 2000
+
+:::
+:::{.ddm-box-2border .show-arrow style="position:absolute;top:2em; left:30em"}
+- New XC functionals
+- GW approximation
+- Topological Materials
+- Machine Learning
+:::
+::::

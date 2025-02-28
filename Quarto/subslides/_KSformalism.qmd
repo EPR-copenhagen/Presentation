@@ -1,0 +1,21 @@
+:::{.columns}
+
+:::{.column width=50%}
+
+\
+\
+\
+\
+
+<div style="color:#004225; text-align:center">
+*Solving one particle many KS equations instead of many particle one equation*
+</div>
+
+:::
+
+:::{.column width=50%}
+![Kohn Sham Formalism](_figs/KS-method.png){#fig-schema width=75% fig-align="center"}
+:::
+
+
+:::

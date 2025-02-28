@@ -1,0 +1,29 @@
+:::{.columns}
+:::{.column width=50%}
+Software packages:
+
+- <span style="color:#2B547E; text-align:center">*Vesta*
+</span> for structure generation
+
+- <span style="color:#810541; text-align:center">*Quantum Espresso*
+</span> for DFT calcualtions
+
+- <span style="color:#FF7722; text-align:center">*Wannier90*
+</span> for Wannierization
+
+
+
+
+- <span style="color:#DF73D4; text-align:center">*PythTB*
+</span> for tight binding calcualtions
+
+- <span style="color:#E75480; text-align:center">*Post W90 modules*
+</span> for transport properties calculations
+
+:::
+
+:::{.column width=50%}
+![](_figs/workflow-titledefense.png){width=80%}
+:::
+
+:::

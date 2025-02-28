@@ -6,7 +6,7 @@
 
 <script>
 function toggleBox(header) {
-    $(header).next('.dd-box, .ddm-box').slideToggle("slow");
+    $(header).next('.dd-box, .ddm-box, .ddm-box-2border').slideToggle("slow");
 }
 </script> 
 
@@ -50,24 +50,24 @@ function toggleBox(header) {
 </script>
 
 <script>
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+// When the user clicks on div, open the popup
+function popup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
+</script>
+
+
+
+<script>
+document.querySelector('.ddm-box').classList.add('show-arrow'); // Adds downward arrow
+document.querySelector('.ddm-box').classList.add('show-up-arrow'); // Adds upward arrow
+</script>
+
+
+<script>
+function flip(element) {
+  element.classList.toggle("flip-active");
+}
+
 </script>
