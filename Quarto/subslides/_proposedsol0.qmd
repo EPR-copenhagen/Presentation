@@ -22,8 +22,7 @@
 
 :::{.column width=40%}
 
-- Unitary transformation of Bloc
-h functions
+- Unitary transformation of Bloch functions
 - Localized in space
 - Translation images of each other
 - Forms orthonormal set
@@ -31,7 +30,7 @@ $$w_{n,k}(r) = \frac{1}{\sqrt N} \sum_N e^{-ik.R} \psi_k(r)$$
 
 <div style="color:FireBrick; text-align:center">
 
-Scales linearly with system's size
+*Computationally Efficient*
 
 </div>
 
@@ -40,7 +39,7 @@ Scales linearly with system's size
 
 :::{.column width=60%}
 
-![](_figs/WFs.png){width=100%}
+![](_figs/WFs.png){width=90%}
 
 :::
 
@@ -51,12 +50,12 @@ Scales linearly with system's size
 :::{.columns}
 
 :::{.column width=65%}
-- Model to analyze energy bands in a crystal
+- Model to analyze electron behavior in a crystal
 - Complete wavefunction can be written as the sum of wannier functions
 - Corresponds to LCAO method
-- Electron under the influence of other atoms are treat as perturbation
+- Electron under the influence of other atoms are treated as perturbation
 
-$$\hat{H} = \hat{H_m} + V_{\phi_{1}} + V_{\phi_{1}}$$
+$$\hat{H} = \hat{H}_{on-site} + V_{neighbors}$$
 
 Energy eigen value is computed as the expectation value:
 
@@ -102,7 +101,7 @@ Anion Exchange
 
 :::{.ddm-box style="font-family:GS_L; border-color:transparent"}
 
-$$ Br_3 \to Br_2I \to BrI_2 \to I_3$$
+$$ (X_A)_3 \to (X_A)_2 (X_B)_1 \to (X_A)_1(X_B)_2 \to (X_B)_3$$
 
 :::
 
@@ -141,11 +140,11 @@ Kroger-Vink notation
 
 :::{.panel-tabset}
 ### Anion Exchange
-![Anion Ecxchange](_figs/anionexchange.png){#fig-schema width=80% fig-align="center"}
+![](_figs/anionexchange.png){width=80% fig-align="center"}
 
 
 ### Point Defects
-![Point Defect](_figs/Pbvac.png){#fig-schema width=80% fig-align="center"}
+![](_figs/Pbvac.png){width=80% fig-align="center"}
 
 :::
 

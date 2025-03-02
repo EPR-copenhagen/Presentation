@@ -2,6 +2,7 @@
 
 [Challenges]{.nav-option data-option="option21" onclick="showContent(this)"}
 [Simplifications]{.nav-option data-option="option22" onclick="showContent(this)"}
+[History]{.nav-option data-option="option23" onclick="showContent(this)"}
 
 :::
 
@@ -61,7 +62,7 @@ $$
 $$
 \hat{H}_{B.O} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
 - 0 + \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + constant
-$${#eq-Hamiltonian}
+$$
 
 
 
@@ -94,7 +95,7 @@ From wavefunction to electron density
 *Probability desnity*
 $$
 |\psi_{electron (r_1 \dots, r_N)}|^2 = |\psi_{electron (r_1 \dots, r_N)}^* \psi_{electron (r_1 \dots, r_N)}|
-$${#eq-electrondensity}
+$$
 
 *Electron desnity*
 $$
@@ -118,5 +119,11 @@ $$
 :::
 
 ::::
+
+:::
+
+:::{#option23Content .content}
+
+{{< include subslides/_DFThistory.qmd >}}
 
 :::

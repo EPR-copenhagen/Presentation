@@ -332,7 +332,8 @@
 <p style="margin-left: 50px;">
 ES2302
 </p>
-<p style="margin-left: 50px;">
+<!-- <p style="margin-left: 50px;">Supervisor: Dr. Sheharyar Pervez</p> -->
+<p style="margin-left: 50px; font-size: 0.8em;">
 Supervisor: Dr.&nbsp;Sheharyar Pervez
 </p>
 </div></div>
@@ -347,7 +348,7 @@ Supervisor: Dr.&nbsp;Sheharyar Pervez
 <section id="background" class="slide level2 scrollable">
 <h2>Background</h2>
 <div class="navbar">
-<p><span class="nav-option" data-option="option11" onclick="showContent(this)">Overview</span> <span class="nav-option" data-option="option12" onclick="showContent(this)">History</span> <span class="nav-option" data-option="option13" onclick="showContent(this)">Theory</span></p>
+<p><span class="nav-option" data-option="option11" onclick="showContent(this)">Overview</span> <!-- [History]{.nav-option data-option="option12" onclick="showContent(this)"} --> <span class="nav-option" data-option="option12" onclick="showContent(this)">Theory</span></p>
 </div>
 <div id="option11Content" class="content">
 <div class="columns">
@@ -393,6 +394,151 @@ Supervisor: Dr.&nbsp;Sheharyar Pervez
 </div></div>
 </div>
 <div id="option12Content" class="content">
+<p>Solving Schrodinger equation: <span id="eq-schrodinger"><span class="math display">\[
+\hat{H}\psi = E\psi
+\qquad(1)\]</span></span></p>
+<p>Hamiltonian for complex systems:</p>
+<!-- $$
+\hat{H} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
+- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2 - \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + \sum_{A=1}^{M}\sum_{B>A}^{M} \frac{Z_AZ_B}{r_{AB}}
+$${#eq-Hamiltonian} -->
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:2em; width:5em; height:5em;background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+-\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:2em;width:6em;height:3em; line-height: 0.8">
+<p>Kinetic Energy of Electrons</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:7em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:20em; left:7em;width:6em;height:3em">
+<p>Kinetic Energy of Nuclei</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:14em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
+- \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}}
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:14em;width:7em;height:3em">
+<p>Electron-Nuclei Interaction</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:20em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span class="math display">\[
++ \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}}
+\]</span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:20em; left:20em;width:7.5em;height:3em">
+<p>Electron-Electron Interaction</p>
+</div>
+</div>
+<div class="ddm">
+<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:26em; width:5em; height:5em; background-color:transparent;border-color:transparent">
+<p><span id="eq-schrodinger"><span class="math display">\[
++ \sum_{A=1}^{M}\sum_{B&gt;A}^{M} \frac{Z_AZ_B}{r_{AB}}
+\qquad(2)\]</span></span></p>
+</div>
+<div class="ddm-box" style="position:absolute;top:17em; left:26em;width:6em;height:3em">
+<p>Nuclei-Nuclei Interaction</p>
+</div>
+</div>
+<div class="fragment fade-in">
+<div style="color:FireBrick; text-align:center; margin-top:15em">
+<p><em>Quiet a mess to find a solution of such systems</em></p>
+</div>
+</div>
+</div>
+<div id="option13Content" class="content">
+<div class="smaller">
+<ul>
+<li><p>Quantum mechanical treatment of electron density</p></li>
+<li><p>Mean field approach and require approximations</p></li>
+<li><p>According to Hohenberg Kohn, it is sufficient to know the electron density of a system to determine its total energy. The many electron wavefunction is not needed. In principle this is enormous simplification,bt in practice approximations must be made</p></li>
+<li><p>Jacob’s ladder</p></li>
+<li><p>Why density of electrons?</p></li>
+<li><p>Function of only 3 psatial variables insted of 3N variables</p></li>
+<li><p>Physically measurable quantity</p></li>
+<li><p>Can be used to obtain all the quantities in the Hamiltonian</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="is-it-possible-to-solve-many-body-schrodinger-equation" class="slide level2">
+<h2>Is it Possible to Solve Many Body Schrodinger Equation?</h2>
+<div class="navbar">
+<p><span class="nav-option" data-option="option21" onclick="showContent(this)">Challenges</span> <span class="nav-option" data-option="option22" onclick="showContent(this)">Simplifications</span> <span class="nav-option" data-option="option23" onclick="showContent(this)">History</span></p>
+</div>
+<div id="option21Content" class="content">
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>28 electrons in a unit cell of Si</li>
+<li>Discretizing each dimension in 10 points gives <span class="math inline">\(10^3\)</span> coordinates in 3D</li>
+<li>For 28 electrons: <span class="math inline">\(10^{3\times28} = 10^{84}\)</span> calculations.</li>
+<li>HPC can perform <span class="math inline">\(10^{18}\)</span> calculations per sec</li>
+<li>Require <span class="math inline">\(10^{66}\)</span> sec to perform calculations
+<div style="color:FireBrick; text-align:center; margin-top:4em">
+<p><em>HUGE TIME!</em></p>
+</div></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="_figs/silicon.png" style="width:70.0%"></p>
+</div></div>
+</div>
+<div id="option22Content" class="content scrollable">
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="ddm" style="font-size:0.63em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
+<p>Born-Oppenheimer Approximation</p>
+</div>
+<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
+<div style="color:FireBrick; text-align:center">
+<p><strong>Born-Oppenheimer Approximation</strong></p>
+<p><em>Simplify the problem by splitting of problem into two parts: Electronic and Nuclear</em></p>
+</div>
+<p><span class="math display">\[
+m_{nuclei} &gt;&gt; m_{electron}
+\]</span></p>
+<p><span class="math display">\[
+\hat{H}_{B.O} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
+- 0 + \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}} + constant
+\]</span></p>
+<div style="color:FireBrick; text-align:center">
+<p><em>Now, only electronic Hamiltonian remains</em></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="ddm" style="font-size:0.63em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
+<p>From wavefunction to electron density</p>
+</div>
+<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
+<p><em>Probability desnity</em> <span class="math display">\[
+|\psi_{electron (r_1 \dots, r_N)}|^2 = |\psi_{electron (r_1 \dots, r_N)}^* \psi_{electron (r_1 \dots, r_N)}|
+\]</span></p>
+<p><em>Electron desnity</em> <span class="math display">\[
+n(\vec{r}) = 2 \Sigma_{i} \psi_{i}^* (\vec{r}) \psi_{i}(\vec{r})  
+\]</span></p>
+<div style="color:FireBrick; text-align:center">
+<p><em>Problem is reduced from 3N variables to 3 variables</em></p>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<div id="option23Content" class="content">
 <div class="center-line">
 
 </div>
@@ -487,151 +633,6 @@ Scheme</p>
 </div>
 </div>
 </div>
-<div id="option13Content" class="content">
-<p>Solving Schrodinger equation: <span id="eq-schrodinger"><span class="math display">\[
-\hat{H}\psi = E\psi
-\qquad(1)\]</span></span></p>
-<p>Hamiltonian for complex systems:</p>
-<!-- $$
-\hat{H} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2 
-- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2 - \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j>1}^{N} \frac{1}{r_{ij}} + \sum_{A=1}^{M}\sum_{B>A}^{M} \frac{Z_AZ_B}{r_{AB}}
-$${#eq-Hamiltonian} -->
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:2em; width:5em; height:5em;background-color:transparent;border-color:transparent">
-<p><span class="math display">\[
--\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
-\]</span></p>
-</div>
-<div class="ddm-box" style="position:absolute;top:17em; left:2em;width:6em;height:3em">
-<p>Kinetic Energy of Electrons</p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:7em; width:5em; height:5em; background-color:transparent;border-color:transparent">
-<p><span class="math display">\[
-- \frac{1}{2} \sum_{A=1}^{M} \frac{1}{M_A} \nabla_A^2
-\]</span></p>
-</div>
-<div class="ddm-box" style="position:absolute;top:20em; left:7em;width:6em;height:3em">
-<p>Kinetic Energy of <em>Nuclei</em></p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:14em; width:5em; height:5em; background-color:transparent;border-color:transparent">
-<p><span class="math display">\[
-- \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}}
-\]</span></p>
-</div>
-<div class="ddm-box" style="position:absolute;top:17em; left:14em;width:6em;height:4em">
-<p>Electron-Nuclei Interaction</p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:20em; width:5em; height:5em; background-color:transparent;border-color:transparent">
-<p><span class="math display">\[
-+ \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}}
-\]</span></p>
-</div>
-<div class="ddm-box" style="position:absolute;top:20em; left:20em;width:6em;height:4em">
-<p>Electron-Electron Interaction</p>
-</div>
-</div>
-<div class="ddm">
-<div class="ddm-head" onclick="toggleBox(this)" style="position:absolute;top:12em; left:26em; width:5em; height:5em; background-color:transparent;border-color:transparent">
-<p><span id="eq-schrodinger"><span class="math display">\[
-+ \sum_{A=1}^{M}\sum_{B&gt;A}^{M} \frac{Z_AZ_B}{r_{AB}}
-\qquad(2)\]</span></span></p>
-</div>
-<div class="ddm-box" style="position:absolute;top:17em; left:26em;width:6em;height:3em">
-<p>Nuclei-Nuclei Interaction</p>
-</div>
-</div>
-<div class="fragment fade-in">
-<div style="color:FireBrick; text-align:center; margin-top:15em">
-<p><em>Quiet a mess to find a solution of such systems</em></p>
-</div>
-</div>
-</div>
-<div id="option13Content" class="content">
-<div class="smaller">
-<ul>
-<li><p>Quantum mechanical treatment of electron density</p></li>
-<li><p>Mean field approach and require approximations</p></li>
-<li><p>According to Hohenberg Kohn, it is sufficient to know the electron density of a system to determine its total energy. The many electron wavefunction is not needed. In principle this is enormous simplification,bt in practice approximations must be made</p></li>
-<li><p>Jacob’s ladder</p></li>
-<li><p>Why density of electrons?</p></li>
-<li><p>Function of only 3 psatial variables insted of 3N variables</p></li>
-<li><p>Physically measurable quantity</p></li>
-<li><p>Can be used to obtain all the quantities in the Hamiltonian</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="is-it-possible-to-solve-many-body-schrodinger-equation" class="slide level2">
-<h2>Is it Possible to Solve Many Body Schrodinger Equation?</h2>
-<div class="navbar">
-<p><span class="nav-option" data-option="option21" onclick="showContent(this)">Challenges</span> <span class="nav-option" data-option="option22" onclick="showContent(this)">Simplifications</span></p>
-</div>
-<div id="option21Content" class="content">
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>28 electrons in a unit cell of Si</li>
-<li>Discretizing each dimension in 10 points gives <span class="math inline">\(10^3\)</span> coordinates in 3D</li>
-<li>For 28 electrons: <span class="math inline">\(10^{3\times28} = 10^{84}\)</span> calculations.</li>
-<li>HPC can perform <span class="math inline">\(10^{18}\)</span> calculations per sec</li>
-<li>Require <span class="math inline">\(10^{66}\)</span> sec to perform calculations
-<div style="color:FireBrick; text-align:center; margin-top:4em">
-<p><em>HUGE TIME!</em></p>
-</div></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<p><img data-src="_figs/silicon.png" style="width:70.0%"></p>
-</div></div>
-</div>
-<div id="option22Content" class="content scrollable">
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="ddm" style="font-size:0.63em; line-height:0">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
-<p>Born-Oppenheimer Approximation</p>
-</div>
-<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
-<div style="color:FireBrick; text-align:center">
-<p><strong>Born-Oppenheimer Approximation</strong></p>
-<p><em>Simplify the problem by splitting of problem into two parts: Electronic and Nuclear</em></p>
-</div>
-<p><span class="math display">\[
-m_{nuclei} &gt;&gt; m_{electron}
-\]</span></p>
-<p><span id="eq-Hamiltonian"><span class="math display">\[
-\hat{H}_{B.O} = -\frac{1}{2} \sum_{i=1}^{N} \nabla_i^2
-- 0 + \sum_{i=1}^{N}\sum_{A=1}^{M} \frac{Z_A}{r_{iA}} + \sum_{i=1}^{N}\sum_{j&gt;1}^{N} \frac{1}{r_{ij}} + constant
-\qquad(3)\]</span></span></p>
-<div style="color:FireBrick; text-align:center">
-<p><em>Now, only electronic Hamiltonian remains</em></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<div class="ddm" style="font-size:0.63em; line-height:0">
-<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: 5px solid red;font-family:GS_C-B">
-<p>From wavefunction to electron density</p>
-</div>
-<div class="ddm-box" style="font-family:GS_L;border-color:transparent">
-<p><em>Probability desnity</em> <span id="eq-electrondensity"><span class="math display">\[
-|\psi_{electron (r_1 \dots, r_N)}|^2 = |\psi_{electron (r_1 \dots, r_N)}^* \psi_{electron (r_1 \dots, r_N)}|
-\qquad(4)\]</span></span></p>
-<p><em>Electron desnity</em> <span class="math display">\[
-n(\vec{r}) = 2 \Sigma_{i} \psi_{i}^* (\vec{r}) \psi_{i}(\vec{r})  
-\]</span></p>
-<div style="color:FireBrick; text-align:center">
-<p><em>Problem is reduced from 3N variables to 3 variables</em></p>
-</div>
-</div>
-</div>
-</div></div>
-</div>
 </section>
 <section id="hohenberg-kohn-theorems-1964" class="slide level2">
 <h2>Hohenberg-Kohn Theorems (1964)</h2>
@@ -643,33 +644,33 @@ The ground state energy of a system is uniquely determined by the ground state e
 <p>For any system of interacting particles in an external potential <span class="math inline">\(V_{ext}(\vec{r})\)</span>, the potential <span class="math inline">\(V_{ext}(\vec{r})\)</span> is determined uniquely by the ground state particle density <span class="math inline">\(n_0(r)\)</span>.</p>
 <p><span id="eq-HK1"><span class="math display">\[
 E_{ground} = E[n(r)]
-\qquad(5)\]</span></span></p>
+\qquad(3)\]</span></span></p>
 <div style="color:FireBrick; text-align:center">
 <p><strong>Second HK Theorem</strong></p>
 </div>
-<p>The density that minimizes the energy functional is the exact ground state density (<em>variational principle</em>)</p>
+<p>The density that minimizes the energy functional is the exact ground state density</p>
 <p><span id="eq-HK2"><span class="math display">\[
 E_{o} \leq E_{trial} = \int \psi_{trial}^* \hat{H} \psi_{trial}
-\qquad(6)\]</span></span></p>
+\qquad(4)\]</span></span></p>
 </section>
 <section id="energy-functional" class="slide level2 scrollable">
 <h2>Energy Functional</h2>
 <p><span id="eq-functional"><span class="math display">\[
-E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}[\rho]
-\qquad(7)\]</span></span></p>
+E[n] = T[n] + E_{Ne}[n] + {\color{purple} {E_{ee}[n]}}
+\qquad(5)\]</span></span></p>
 <p><span id="eq-functional"><span class="math display">\[
-E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}^{classical}[\rho] + E_{XC}[\rho]
-\qquad(8)\]</span></span></p>
+E[n] = T[n] + E_{Ne}[n] + {\color{purple} {E_{ee}^{classical}[n] + E_{XC}[n]}}
+\qquad(6)\]</span></span></p>
 <div style="color:FireBrick; text-align:center">
 <p><em>The explicit form of <span class="math inline">\(T[\rho]\)</span> and <span class="math inline">\(E_{XC}\)</span> is the major challenge of DFT</em></p>
 </div>
 <p><span id="eq-functional"><span class="math display">\[
-E_{KS}[\rho] = \overbrace{T_s[\rho] + E_{Ne}[\rho] +  E_{ee}^{classical}[\rho]}^\textit{known functionals} + \overbrace{E_{ee}^{XC}[\rho]}^\textit{unknown functionals}
-\qquad(9)\]</span></span></p>
+E_{KS}[n] = \overbrace{T_s[n] + E_{Ne}[n] +  {\color{purple} {E_{ee}^{classical}[n]}}}^\textit{known functionals} + \overbrace{{\color{purple} {E_{ee}^{XC}[n]}}}^\textit{unknown functionals}
+\qquad(7)\]</span></span></p>
 <p><span class="math inline">\(E_{XC}\)</span> includes:</p>
 <ul>
 <li>Exchange and correlation energy</li>
-<li>Correction of Kinetic energy term <span class="math inline">\(\Delta T_{\rho}[\rho]\)</span></li>
+<li>Correction of kinetic energy term <span class="math inline">\(\Delta T_{s}[n]\)</span></li>
 </ul>
 <!-- <div style="color:FireBrick; text-align:left">
 
@@ -693,14 +694,9 @@ What we do not know is exchange and correlation functional $E_{XC}$ containing:
 <p><em>Solving one particle many KS equations instead of many particle one equation</em></p>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/KS-method.png" class="quarto-figure quarto-figure-center" style="width:75.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Kohn Sham Formalism
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_figs/KS-method.png" class="quarto-figure quarto-figure-center" style="width:75.0%"></p>
 </figure>
 </div>
 </div></div>
@@ -721,8 +717,9 @@ Figure&nbsp;1: Kohn Sham Formalism
 <ul>
 <li><p>Perovskite is <span style="color:Blue"> Calcium Titanate <span class="math inline">\((CaTiO_3)\)</span> </span></p>
 <ul>
-<li>Discovered in 1839 by Gustav Rose in Ural mountains and named after mineralogist Count Lev Perovski.</li>
-<li>The structure was first described by <span style="color:Green"> Victor Goldschmidt in 1926 </span></li>
+<li>Discovered in 1839 by Gustav Rose</li>
+<li>Named after mineralogist Count Lev Perovski.</li>
+<li>Structure first described by <span style="color:Green"> Victor Goldschmidt in 1926 </span></li>
 </ul></li>
 </ul>
 <div style="color:FireBrick; text-align:center">
@@ -739,30 +736,28 @@ Figure&nbsp;1: Kohn Sham Formalism
 <li>Good thermoelectric properties</li>
 <li>Ferroelectric properties</li>
 </ul>
-<div style="color:FireBrick; text-align:center">
-<p>Undesirable phase transitions at room temperature affecting their stability</p>
-</div>
+<!-- <div style="color:FireBrick; text-align:center">
+
+Undesirable phase transitions at room temperature affecting their stability
+
+</div> -->
 </div>
 <div id="tabset-1-3">
 <ul>
 <li>Crystal</li>
 <li>Periodicity - translational symmetry</li>
-<li>Bloch Theorem Eigenstates of periodic Hamiltonian can be written as: <span id="eq-Bloch’stheorem"><span class="math display">\[
+<li>Bloch Theorem<br>
+<br>
+<span id="eq-Bloch’stheorem"><span class="math display">\[
 \psi_{n,k}(r) = e^{\iota k.r} u_{n,k}(r)
-\qquad(10)\]</span></span></li>
+\qquad(8)\]</span></span></li>
 </ul>
-<div style="color:FireBrick; text-align:center">
-<p>Delocalized orbitals- not appropriate for visualziation of chemcial bonds</p>
-</div>
-<div style="color:FireBrick; text-align:center">
-<p>Scales cubically with system’s size due to the dependance of k values</p>
-</div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div style="position: relative; width: 15em; height: 12em;">
-<p><img data-src="_figs/perovskite.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 75%;"> <img data-src="_figs/refs.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <img data-src="_figs/Bloch.jpg" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 95%;"></p>
+<div style="position: relative; width: 15em; height: 15em;">
+<p><img data-src="_figs/perovskite.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 85%; height: 65%;"> <img data-src="_figs/refs.png" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <img data-src="_figs/Bloch.jpg" class="fragment" style="position: absolute; top: 0; left: 0; width: 100%; height: 95%;"></p>
 </div>
 <!-- ![](_figs/perovskite.png){width=120%}
 
@@ -814,28 +809,28 @@ Figure&nbsp;1: Kohn Sham Formalism
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li>Unitary transformation of Bloc h functions</li>
+<li>Unitary transformation of Bloch functions</li>
 <li>Localized in space</li>
 <li>Translation images of each other</li>
 <li>Forms orthonormal set <span class="math display">\[w_{n,k}(r) = \frac{1}{\sqrt N} \sum_N e^{-ik.R} \psi_k(r)\]</span></li>
 </ul>
 <div style="color:FireBrick; text-align:center">
-<p>Scales linearly with system’s size</p>
+<p><em>Computationally Efficient</em></p>
 </div>
 </div><div class="column" style="width:60%;">
-<p><img data-src="_figs/WFs.png" style="width:100.0%"></p>
+<p><img data-src="_figs/WFs.png" style="width:90.0%"></p>
 </div></div>
 </div>
 <div id="tabset-2-2">
 <div class="columns">
 <div class="column" style="width:65%;">
 <ul>
-<li>Model to analyze energy bands in a crystal</li>
+<li>Model to analyze electron behavior in a crystal</li>
 <li>Complete wavefunction can be written as the sum of wannier functions</li>
 <li>Corresponds to LCAO method</li>
-<li>Electron under the influence of other atoms are treat as perturbation</li>
+<li>Electron under the influence of other atoms are treated as perturbation</li>
 </ul>
-<p><span class="math display">\[\hat{H} = \hat{H_m} + V_{\phi_{1}} + V_{\phi_{1}}\]</span></p>
+<p><span class="math display">\[\hat{H} = \hat{H}_{on-site} + V_{neighbors}\]</span></p>
 <p>Energy eigen value is computed as the expectation value:</p>
 <p><span class="math display">\[
 \begin{bmatrix}
@@ -863,7 +858,7 @@ t_{21}   &amp;    E_{22}
 <p>Anion Exchange</p>
 </div>
 <div class="ddm-box" style="font-family:GS_L; border-color:transparent">
-<p><span class="math display">\[ Br_3 \to Br_2I \to BrI_2 \to I_3\]</span></p>
+<p><span class="math display">\[ (X_A)_3 \to (X_A)_2 (X_B)_1 \to (X_A)_1(X_B)_2 \to (X_B)_3\]</span></p>
 </div>
 </div>
 <div class="ddm" style="font-size:0.63em; font-family:Ubuntu Mono; line-height:0; margin-bottom: 0px; margin-top: 0px">
@@ -886,26 +881,16 @@ t_{21}   &amp;    E_{22}
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Anion Exchange</a></li><li><a href="#tabset-3-2">Point Defects</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/anionexchange.png" class="quarto-figure quarto-figure-center" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Anion Ecxchange
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_figs/anionexchange.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
 <div id="tabset-3-2">
-<div id="fig-schema" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="_figs/Pbvac.png" class="quarto-figure quarto-figure-center" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Point Defect
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_figs/Pbvac.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
@@ -940,10 +925,12 @@ Figure&nbsp;3: Point Defect
 <section>
 <section id="references" class="title-slide slide level1 center">
 <h1>References</h1>
-<p>Perovskite slide refs: https://pubs.rsc.org/en/content/articlelanding/2024/ra/d4ra01640h?utm_source=chatgpt.com</p>
-<p>https://www.science.org/doi/10.1126/sciadv.abj5881#:~:text=Here%2C%20we%20report%20on%20the,that%20promotes%20the%20ion%20displacement.</p>
-<p>https://nanoconvergencejournal.springeropen.com/articles/10.1186/s40580-024-00440-7?utm_source=chatgpt.com</p>
-<p>https://pubs.rsc.org/en/content/articlelanding/2015/ta/c4ta05226a?utm_source=chatgpt.com</p>
+<ul>
+<li>RSC Advances (2024). Title of the Paper. RSC Adv. 2024, D4RA01640H. DOI: 10.1039/D4RA01640H</li>
+<li>Science Advances (2021). Title of the Paper. Sci. Adv. 2021, 7, eabj5881. DOI: 10.1126/sciadv.abj5881</li>
+<li>Nano Convergence (2024). Title of the Paper. Nano Convergence 2024, 11, 440-456. DOI: 10.1186/s40580-024-00440-7</li>
+<li>Journal of Materials Chemistry A (2015). Title of the Paper. J. Mater. Chem. A 2015, 3, 5226–5240. DOI: 10.1039/C4TA05226A</li>
+</ul>
 </section>
 <section id="section-1" class="slide level2 center">
 <h2></h2>

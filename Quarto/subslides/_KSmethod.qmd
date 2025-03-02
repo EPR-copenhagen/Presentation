@@ -1,11 +1,11 @@
 
 $$
-E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}[\rho]
+E[n] = T[n] + E_{Ne}[n] + {\color{purple} {E_{ee}[n]}}
 $${#eq-functional}
 
 
 $$
-E[\rho] = T[\rho] + E_{Ne}[\rho] + E_{ee}^{classical}[\rho] + E_{XC}[\rho]
+E[n] = T[n] + E_{Ne}[n] + {\color{purple} {E_{ee}^{classical}[n] + E_{XC}[n]}}
 $${#eq-functional}
 
 
@@ -20,13 +20,13 @@ $${#eq-functional}
 
 
 $$
-E_{KS}[\rho] = \overbrace{T_s[\rho] + E_{Ne}[\rho] +  E_{ee}^{classical}[\rho]}^\textit{known functionals} + \overbrace{E_{ee}^{XC}[\rho]}^\textit{unknown functionals}
+E_{KS}[n] = \overbrace{T_s[n] + E_{Ne}[n] +  {\color{purple} {E_{ee}^{classical}[n]}}}^\textit{known functionals} + \overbrace{{\color{purple} {E_{ee}^{XC}[n]}}}^\textit{unknown functionals}
 $${#eq-functional}
 
 $E_{XC}$ includes:
 
 - Exchange and correlation energy
-- Correction of Kinetic energy term $\Delta T_{\rho}[\rho]$
+- Correction of kinetic energy term $\Delta T_{s}[n]$
 
 <!-- <div style="color:FireBrick; text-align:left">
 

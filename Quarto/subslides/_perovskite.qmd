@@ -10,8 +10,9 @@
 
 - Perovskite is <span style= "color:Blue"> Calcium Titanate $(CaTiO_3)$ </span>
 
-    - Discovered in 1839 by Gustav Rose in Ural mountains and named after mineralogist Count Lev Perovski.
-    - The structure was first described by  <span style="color:Green"> Victor Goldschmidt in 1926 </span>
+    - Discovered in 1839 by Gustav Rose 
+    - Named after mineralogist Count Lev Perovski.
+    - Structure first described by  <span style="color:Green"> Victor Goldschmidt in 1926 </span>
 
 
 <div style="color:FireBrick; text-align:center">
@@ -29,11 +30,11 @@ Perovskites generally exist in the form $ABX_3$.
 - Good thermoelectric properties
 - Ferroelectric properties
 
-<div style="color:FireBrick; text-align:center">
+<!-- <div style="color:FireBrick; text-align:center">
 
 Undesirable phase transitions at room temperature affecting their stability
 
-</div>
+</div> -->
 
 
 #### Technical Background
@@ -41,22 +42,14 @@ Undesirable phase transitions at room temperature affecting their stability
 - Crystal
 - Periodicity - translational symmetry
 - Bloch Theorem
-Eigenstates of periodic Hamiltonian can be written as:
+\
+\
 $$
 \psi_{n,k}(r) = e^{\iota k.r} u_{n,k}(r)
 $${#eq-Bloch'stheorem}
 
-<div style="color:FireBrick; text-align:center">
 
-Delocalized orbitals- not appropriate for visualziation of chemcial bonds
 
-</div>
-
-<div style="color:FireBrick; text-align:center">
-
-Scales cubically with system's size due to the dependance of k values
-
-</div>
 
 :::
 
@@ -64,8 +57,8 @@ Scales cubically with system's size due to the dependance of k values
 
 ::: {.column width="50%"} 
 
-::: {style="position: relative; width: 15em; height: 12em;"}
-![](_figs/perovskite.png){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 75%;"}
+::: {style="position: relative; width: 15em; height: 15em;"}
+![](_figs/perovskite.png){.fragment style="position: absolute; top: 0; left: 0; width: 85%; height: 65%;"}
 ![](_figs/refs.png){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"}
 ![](_figs/Bloch.jpg){.fragment style="position: absolute; top: 0; left: 0; width: 100%; height: 95%;"}
 :::

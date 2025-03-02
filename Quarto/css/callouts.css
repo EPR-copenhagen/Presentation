@@ -101,6 +101,7 @@
       padding-left: 10px;
       color: black;
       background-color:white;
+      line-height: 1.0;
       border: 2px solid var(--border-color, FireBrick);
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;

@@ -22,7 +22,7 @@ $${#eq-HK1}
 
 </div>
 
-The density that minimizes the energy functional is the exact ground state density (*variational principle*)
+The density that minimizes the energy functional is the exact ground state density 
 
 $$
 E_{o} \leq E_{trial} = \int \psi_{trial}^* \hat{H} \psi_{trial}

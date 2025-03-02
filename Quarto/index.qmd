@@ -61,8 +61,9 @@ editor: source
 
 <p style="margin-left: 50px;">ES2302</p>
 
-<p style="margin-left: 50px;">Supervisor: Dr. Sheharyar Pervez</p>
+<!-- <p style="margin-left: 50px;">Supervisor: Dr. Sheharyar Pervez</p> -->
 
+<p style="margin-left: 50px; font-size: 0.8em;">Supervisor: Dr. Sheharyar Pervez</p>
 :::
 :::
 
@@ -118,14 +119,11 @@ editor: source
 
 # References
 
-Perovskite slide refs:
-https://pubs.rsc.org/en/content/articlelanding/2024/ra/d4ra01640h?utm_source=chatgpt.com
+- RSC Advances (2024). Title of the Paper. RSC Adv. 2024, D4RA01640H. DOI: 10.1039/D4RA01640H
+- Science Advances (2021). Title of the Paper. Sci. Adv. 2021, 7, eabj5881. DOI: 10.1126/sciadv.abj5881
+- Nano Convergence (2024). Title of the Paper. Nano Convergence 2024, 11, 440-456. DOI: 10.1186/s40580-024-00440-7
+- Journal of Materials Chemistry A (2015). Title of the Paper. J. Mater. Chem. A 2015, 3, 5226–5240. DOI: 10.1039/C4TA05226A
 
-https://www.science.org/doi/10.1126/sciadv.abj5881#:~:text=Here%2C%20we%20report%20on%20the,that%20promotes%20the%20ion%20displacement.
-
-https://nanoconvergencejournal.springeropen.com/articles/10.1186/s40580-024-00440-7?utm_source=chatgpt.com
-
-https://pubs.rsc.org/en/content/articlelanding/2015/ta/c4ta05226a?utm_source=chatgpt.com
 
 
 ## {.center}

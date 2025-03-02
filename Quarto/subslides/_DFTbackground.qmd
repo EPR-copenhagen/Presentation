@@ -1,11 +1,8 @@
 :::{.navbar}
 
 [Overview]{.nav-option data-option="option11" onclick="showContent(this)"}
-[History]{.nav-option data-option="option12" onclick="showContent(this)"}
-[Theory]{.nav-option data-option="option13" onclick="showContent(this)"}
-
-
-
+<!-- [History]{.nav-option data-option="option12" onclick="showContent(this)"} -->
+[Theory]{.nav-option data-option="option12" onclick="showContent(this)"}
 
 :::
 
@@ -28,16 +25,23 @@
 
 
 ::::{.flip-box onclick="flip(this)"}
+
 ::: {.flip-box-inner}
+
 ::: {.flip-box-front}
 ![Water Molecule vs Ocean](_figs/ocean.png)
+
 :::
 
 ::: {.flip-box-back}
 ![An Individual vs Society](_figs/mansociety.png)
+
 :::
+
 :::
+
 ::::
+
 :::
 
 :::{.column width=50%}
@@ -66,23 +70,15 @@
 </div>
 
 :::
-:::
 
 :::
 
 :::
+
+:::
+
 
 :::{#option12Content .content}
-
-{{< include subslides/_DFThistory.qmd >}}
-
-
-
-
-
-:::
-
-:::{#option13Content .content}
 Solving Schrodinger equation:
 $$
 \hat{H}\psi = E\psi
@@ -104,7 +100,7 @@ $$
 $$
 
 :::
-:::{.ddm-box style="position:absolute;top:17em; left:2em;width:6em;height:3em"}
+:::{.ddm-box style="position:absolute;top:17em; left:2em;width:6em;height:3em; line-height: 0.8"}
 Kinetic Energy of Electrons
 :::
 ::::
@@ -118,7 +114,7 @@ $$
 
 :::
 :::{.ddm-box style="position:absolute;top:20em; left:7em;width:6em;height:3em"}
-Kinetic Energy of *Nuclei*
+Kinetic Energy of Nuclei
 :::
 ::::
 
@@ -129,7 +125,7 @@ $$
 $$
 
 :::
-:::{.ddm-box style="position:absolute;top:17em; left:14em;width:6em;height:4em"}
+:::{.ddm-box style="position:absolute;top:17em; left:14em;width:7em;height:3em"}
 Electron-Nuclei Interaction
 :::
 ::::
@@ -141,7 +137,7 @@ $$
 $$
 
 :::
-:::{.ddm-box style="position:absolute;top:20em; left:20em;width:6em;height:4em"}
+:::{.ddm-box style="position:absolute;top:20em; left:20em;width:7.5em;height:3em"}
 Electron-Electron Interaction
 :::
 ::::

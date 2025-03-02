@@ -14,7 +14,7 @@
 :::
 
 :::{.column width=50%}
-![Kohn Sham Formalism](_figs/KS-method.png){#fig-schema width=75% fig-align="center"}
+![](_figs/KS-method.png){width=75% fig-align="center"}
 :::
 
 
