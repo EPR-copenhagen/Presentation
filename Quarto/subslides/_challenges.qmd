@@ -111,6 +111,10 @@ $$
 
 </div>
 
+<div style="color:FireBrick; text-align:center; margin-top:4em">
+**Hence DFT**
+</div>
+
 
 :::
 

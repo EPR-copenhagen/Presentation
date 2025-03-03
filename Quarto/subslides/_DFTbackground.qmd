@@ -9,14 +9,18 @@
 
 :::{#option11Content .content}
 
+<div style="color:#0a6774; text-align:center">
+
+**Many Body Problem**
+
+
+</div>
 
 :::{.columns}
 :::{.column width=50%}
 
 
 <div style="color:#0a6774; text-align:center">
-
-**Many Body Problem**
 
 *WORLD IS COMPLEX!*
 
@@ -50,7 +54,7 @@
 
 <div style="color:#0a6774; text-align:center">
 
-**EMERGENCE**
+*EMERGENCE*
 
 </div>
 

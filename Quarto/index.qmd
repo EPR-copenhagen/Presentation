@@ -1,5 +1,5 @@
 ---
-title: "."
+title: " "
 format:
     revealjs:
         math: true
@@ -70,7 +70,7 @@ editor: source
 <!-- <div class="vl"></div> -->
 
 
-# Introduction to Density Functional Theory 
+# From Many Body Problem to Density Functional Theory 
 
 <!-- ## Brief History of Computational Methods
 {{< include subslides/_DFThistory.qmd >}} -->
