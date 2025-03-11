@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "Quarto/index.html#section",
+    "href": "Quarto/index.html#section",
+    "title": "",
+    "section": "",
+    "text": "DFT Leveraged Tight Binding Insights Into Disordered Perovskites\nPhD. Title Defense\nFaculty of Engineering Sciences\nGhulam Ishaq Khan Institute of Engineering Sciences and Technology\n\n\nMisbah Shaheen\n\n\nES2302\n\n\n\nSupervisor: Dr. Sheharyar Pervez"
+  },
+  {
+    "objectID": "Quarto/index.html#background",
+    "href": "Quarto/index.html#background",
+    "title": "",
+    "section": "Background",
+    "text": "Background\n\nOverview  Theory\n\n\n\nMany Body Problem\n\n\n\n\nWORLD IS COMPLEX!\n\n\n\n\n\n\n\nWater Molecule vs Ocean\n\n\n\n\n\n\n\nAn Individual vs Society\n\n\n\n\n\n\n\n\nEMERGENCE\n\n\n\n  \n\n\n\nCollectivity creates new patterns\n\n\n\n\n\nSolving Schrodinger equation: \\[\n\\hat{H}\\psi = E\\psi\n\\qquad(1)\\]\nHamiltonian for complex systems:\n\n\n\n\\[\n-\\frac{1}{2} \\sum_{i=1}^{N} \\nabla_i^2\n\\]\n\n\nKinetic Energy of Electrons\n\n\n\n\n\\[\n- \\frac{1}{2} \\sum_{A=1}^{M} \\frac{1}{M_A} \\nabla_A^2\n\\]\n\n\nKinetic Energy of Nuclei\n\n\n\n\n\\[\n- \\sum_{i=1}^{N}\\sum_{A=1}^{M} \\frac{Z_A}{r_{iA}}\n\\]\n\n\nElectron-Nuclei Interaction\n\n\n\n\n\\[\n+ \\sum_{i=1}^{N}\\sum_{j&gt;1}^{N} \\frac{1}{r_{ij}}\n\\]\n\n\nElectron-Electron Interaction\n\n\n\n\n\\[\n+ \\sum_{A=1}^{M}\\sum_{B&gt;A}^{M} \\frac{Z_AZ_B}{r_{AB}}\n\\qquad(2)\\]\n\n\nNuclei-Nuclei Interaction\n\n\n\n\nQuiet a mess to find a solution of such systems\n\n\n\n\n\n\nQuantum mechanical treatment of electron density\nMean field approach and require approximations\nAccording to Hohenberg Kohn, it is sufficient to know the electron density of a system to determine its total energy. The many electron wavefunction is not needed. In principle this is enormous simplification,bt in practice approximations must be made\nJacob’s ladder\nWhy density of electrons?\nFunction of only 3 psatial variables insted of 3N variables\nPhysically measurable quantity\nCan be used to obtain all the quantities in the Hamiltonian"
+  },
+  {
+    "objectID": "Quarto/index.html#is-it-possible-to-solve-many-body-schrodinger-equation",
+    "href": "Quarto/index.html#is-it-possible-to-solve-many-body-schrodinger-equation",
+    "title": "",
+    "section": "Is it Possible to Solve Many Body Schrodinger Equation?",
+    "text": "Is it Possible to Solve Many Body Schrodinger Equation?\n\nChallenges Simplifications History\n\n\n\n\n\n28 electrons in a unit cell of Si\nDiscretizing each dimension in 10 points gives \\(10^3\\) coordinates in 3D\nFor 28 electrons: \\(10^{3\\times28} = 10^{84}\\) calculations.\nHPC can perform \\(10^{18}\\) calculations per sec\nRequire \\(10^{66}\\) sec to perform calculations\n\nHUGE TIME!\n\n\n\n\n\n\n\n\n\n\n\nBorn-Oppenheimer Approximation\n\n\n\nBorn-Oppenheimer Approximation\nSimplify the problem by splitting of problem into two parts: Electronic and Nuclear\n\n\\[\nm_{nuclei} &gt;&gt; m_{electron}\n\\]\n\\[\n\\hat{H}_{B.O} = -\\frac{1}{2} \\sum_{i=1}^{N} \\nabla_i^2\n- 0 + \\sum_{i=1}^{N}\\sum_{A=1}^{M} \\frac{Z_A}{r_{iA}} + \\sum_{i=1}^{N}\\sum_{j&gt;1}^{N} \\frac{1}{r_{ij}} + constant\n\\]\n\nNow, only electronic Hamiltonian remains\n\n\n\n\n\n\nFrom wavefunction to electron density\n\n\nProbability desnity \\[\n|\\psi_{electron (r_1 \\dots, r_N)}|^2 = |\\psi_{electron (r_1 \\dots, r_N)}^* \\psi_{electron (r_1 \\dots, r_N)}|\n\\]\nElectron desnity \\[\nn(\\vec{r}) = 2 \\Sigma_{i} \\psi_{i}^* (\\vec{r}) \\psi_{i}(\\vec{r})  \n\\]\n\nProblem is reduced from 3N variables to 3 variables\n\n\nHence DFT\n\n\n\n\n\n\n\n\n\n\n\n\n\n1927\n\n\nThomas-Fermi\nModel\n\n\n\n\n1959\n\n\nPseudopotentials\n\n\n\n\n\n1964\n\n\nHohenberg-Kohn\nTheorems\n\n\n\n\n\n\n1965\n\n\nKohn-Sham\nScheme\n\n\n\n\n\n1972\n\n\nRelativistic Effects\n\n\n\n\n\n1980s\n\n\n\nLDA\nTDDFT\nDFPT\n\n\n\n\n\n1990s\n\n\n\nMLWFs\nHubbard Correction\nXC functionals\nGGA\n\n\n\n\n\nPost 2000\n\n\n\nNew XC functionals\nGW approximation\nTopological Materials\nMachine Learning"
+  },
+  {
+    "objectID": "Quarto/index.html#hohenberg-kohn-theorems-1964",
+    "href": "Quarto/index.html#hohenberg-kohn-theorems-1964",
+    "title": "",
+    "section": "Hohenberg-Kohn Theorems (1964)",
+    "text": "Hohenberg-Kohn Theorems (1964)\n\nFirst HK Theorem\n\n\nFor any system of interacting particles in an external potential \\(V_{ext}(\\vec{r})\\), the potential \\(V_{ext}(\\vec{r})\\) is determined uniquely by the ground state particle density \\(n_0(r)\\).\n\\[\nE_{ground} = E[n(r)]\n\\qquad(3)\\]\n\nSecond HK Theorem\n\nThe density that minimizes the energy functional is the exact ground state density\n\\[\nE_{o} \\leq E_{trial} = \\int \\psi_{trial}^* \\hat{H} \\psi_{trial}\n\\qquad(4)\\]"
+  },
+  {
+    "objectID": "Quarto/index.html#energy-functional",
+    "href": "Quarto/index.html#energy-functional",
+    "title": "",
+    "section": "Energy Functional",
+    "text": "Energy Functional\n\\[\nE[n] = T[n] + E_{Ne}[n] + {\\color{purple} {E_{ee}[n]}}\n\\qquad(5)\\]\n\\[\nE[n] = T[n] + E_{Ne}[n] + {\\color{purple} {E_{ee}^{classical}[n] + E_{XC}[n]}}\n\\qquad(6)\\]\n\nThe explicit form of \\(T[\\rho]\\) and \\(E_{XC}\\) is the major challenge of DFT\n\n\\[\nE_{KS}[n] = \\overbrace{T_s[n] + E_{Ne}[n] +  {\\color{purple} {E_{ee}^{classical}[n]}}}^\\textit{known functionals} + \\overbrace{{\\color{purple} {E_{ee}^{XC}[n]}}}^\\textit{unknown functionals}\n\\qquad(7)\\]\n\\(E_{XC}\\) includes:\n\nExchange and correlation energy\nCorrection of kinetic energy term \\(\\Delta T_{s}[n]\\)"
+  },
+  {
+    "objectID": "Quarto/index.html#kohn-sham-formalism",
+    "href": "Quarto/index.html#kohn-sham-formalism",
+    "title": "",
+    "section": "Kohn-Sham Formalism",
+    "text": "Kohn-Sham Formalism\n\n\n\n\n\n\n\n\nSolving one particle many KS equations instead of many particle one equation"
+  },
+  {
+    "objectID": "Quarto/index.html#perovskites",
+    "href": "Quarto/index.html#perovskites",
+    "title": "",
+    "section": "Perovskites",
+    "text": "Perovskites\n\n\n\nStructurePropertiesTechnical Background\n\n\n\nPerovskite is  Calcium Titanate \\((CaTiO_3)\\) \n\nDiscovered in 1839 by Gustav Rose\nNamed after mineralogist Count Lev Perovski.\nStructure first described by  Victor Goldschmidt in 1926 \n\n\n\nPerovskites generally exist in the form \\(ABX_3\\).\n\n\n\n\nFlexible structure\nTunable bandgap\nHigh absorption coefficient\nHigh dielectric constant\nLow exciton binding energy\nGood thermoelectric properties\nFerroelectric properties\n\n\n\n\n\nCrystal\nPeriodicity - translational symmetry\nBloch Theorem\n\n\\[\n\\psi_{n,k}(r) = e^{\\iota k.r} u_{n,k}(r)\n\\qquad(8)\\]"
+  },
+  {
+    "objectID": "Quarto/index.html#problem-statement-1",
+    "href": "Quarto/index.html#problem-statement-1",
+    "title": "",
+    "section": "Problem Statement",
+    "text": "Problem Statement\n\nTechnical Challenge: Computational Cost\n\n\nDFT is computationally expensive for large, disordered systems\nModeling defects accurately requires efficient methodologies\n\n\nMaterial Challenge: Stability Issues\n\n\nIntrinsic instability\nBandgap variations due to phase transitions"
+  },
+  {
+    "objectID": "Quarto/index.html#wannierization-and-disordered-perovskites",
+    "href": "Quarto/index.html#wannierization-and-disordered-perovskites",
+    "title": "",
+    "section": "Wannierization and Disordered Perovskites",
+    "text": "Wannierization and Disordered Perovskites\n\nImplement computationally efficient Wannierization on anion exchnaged and point defected Lead Halide Perovskites\n\n\nWannierization and Tight Binding Anion Exchange and Point Defects\n\n\n\nWannierizationTight Binding\n\n\n\n\n\nUnitary transformation of Bloch functions\nLocalized in space\nTranslation images of each other\nForms orthonormal set \\[w_{n,k}(r) = \\frac{1}{\\sqrt N} \\sum_N e^{-ik.R} \\psi_k(r)\\]\n\n\nComputationally Efficient\n\n\n\n\n\n\n\n\n\nModel to analyze electron behavior in a crystal\nComplete wavefunction can be written as the sum of wannier functions\nCorresponds to LCAO method\nElectron under the influence of other atoms are treated as perturbation\n\n\\[\\hat{H} = \\hat{H}_{on-site} + V_{neighbors}\\]\nEnergy eigen value is computed as the expectation value:\n\\[\n\\begin{bmatrix}\n\\langle \\phi_1|\\hat{H}|\\phi_1 \\rangle   &    \\langle \\phi_1|\\hat{H}|\\phi_2 \\rangle\\\\\n\\langle \\phi_2|\\hat{H}|\\phi_1 \\rangle   &    \\langle \\phi_2|\\hat{H}|\\phi_2 \\rangle\n\\end{bmatrix}\n=\n\\begin{bmatrix}\nE_{11}   &   t_{12}\\\\\nt_{21}   &    E_{22}\n\\end{bmatrix}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\nAnion Exchange\n\n\n\\[ (X_A)_3 \\to (X_A)_2 (X_B)_1 \\to (X_A)_1(X_B)_2 \\to (X_B)_3\\]\n\n\n\n\nPoint Defects\n\n\n\nKroger-Vink notation\n\n\n\\[V_{Pb}^{\\prime \\prime}\\]\n\\[M_{Pb}^{(q-2).}\\]\n\\[M_{Pb}^{(q-2)\\prime}\\]\n\n\n\n\n\nAnion ExchangePoint Defects"
+  },
+  {
+    "objectID": "Quarto/index.html#strategy-and-computational-details",
+    "href": "Quarto/index.html#strategy-and-computational-details",
+    "title": "",
+    "section": "Strategy and Computational Details",
+    "text": "Strategy and Computational Details\n\n\nSoftware packages:\n\nVesta  for structure generation\nQuantum Espresso  for DFT calcualtions\nWannier90  for Wannierization\nPythTB  for tight binding calcualtions\nPost W90 modules  for transport properties calculations"
+  },
+  {
+    "objectID": "Quarto/index.html#section-1",
+    "href": "Quarto/index.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "The End"
+  }
+]
