@@ -1,0 +1,8 @@
+project:
+  type: website
+  output-dir: ../docs  # Moves output to docs/ for GitHub Pages
+
+website:
+  title: "My Presentation"
+  navbar: true
+  page-navigation: true
